@@ -1,0 +1,332 @@
+<html>
+
+<head>
+    <title>Index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <!-- SELECT2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <div class="col-md-3">
+            </div>
+
+
+            <div class="col-md-6">
+
+                <div>
+                    <h1>Nyt Projekt</h1>
+                    <hr>
+                </div>
+
+                <!-- New Project START -->
+                <div>
+                    <form>
+                        <label>Firma navn</label><input class="form-control" type="text" name="businessName">
+                        <br>
+                        <label>Projekt navn</label><input class="form-control" type="text" name="projectName">
+                        <br>
+                        <label>Start dato</label><input class="form-control" type="date" name="date" id="dateofbirth" />
+                        <br>
+                        <label>Note</label><textarea class="form-control" placeholder="Valgfrit"></textarea>
+                    </form>
+                    <hr>
+                </div>
+                <!-- New Project END -->
+
+
+                <div class="row">
+                    <!-- START PROJECT TYPE -->
+                    <!-- START TEMPLATE -->
+                    <div class="col-md-12">
+                        <h3>Projekt Type</h3>
+                    </div>
+                    <div>
+                        <div class="col-md-4">
+                            <div>
+                                <button class="btn btn-default" data-toggle="collapse" data-target="#ProjectTypeCollapse1" style="width:100%">Tid &amp; Materialer</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div>
+                                <button class="btn btn-default" style="width:100%">Fastlagt Pris</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div>
+                                <button class="btn btn-default" style="width:100%">Ferie</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- START COLLAPSE -->
+                    <div id="ProjectTypeCollapse1" class="collapse">
+                        <div class="row">
+                            <!-- START GEM TEMPLATE -->
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8 css_divPadding-top">
+                                <div class="row" style="padding-top: 20px;">
+                                    <div class="col-md-8">
+
+                                        <div>
+                                            <label>Faktureringsmetode</label>
+                                            <select class="js_selectFirmaPicker" style="width:100%">
+                                                    <option value="">Ingen faktureringsmetode valgt</option>
+                                                    <option value="P">Projekt timepris</option>
+                                                    <option value="I">Person timepris</option>
+                                                    <option value="M">Opgave timepris</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Pris</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <div class="row">
+                            <!-- START GEM TEMPLATE -->
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <div class="css_divPadding-top">
+                                    <label>Budget</label>
+                                    <br>
+                                    <select class="js_selectFirmaPicker" style="width:100%">
+                                                    <option value="I">Ingen faktureringsmetode valgt</option>
+                                                    <option value="M">Samlet projekttimer</option>
+                                                    <option value="">Samlet projektudgifter</option>
+                                                    <option value="">Timer pr. opgave</option>
+                                                    <option value="">Timer pr. person</option>
+                                                    <option value="">Udgifter pr. opgave</option>
+                                                </select>
+                                    <br>
+                                    <div class="css_divPadding-top">
+
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><input type="checkbox" value=""> Send email, hvis projektet overstiger</span>
+                                            <input id="msg" type="text" class="form-control" name="msg" placeholder="%">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </div>
+                    <!-- END COLLAPSE -->
+
+                </div>
+                <!-- END PROJECT TYPE -->
+
+                <hr>
+                <br>
+
+                <!-- ASSIGNMENT PICKER START -->
+                <div class="row">
+                    <div class="col-sm-12" class="form-control">
+                        <table class="table">
+                            <tr style="background-color: #F2F2F2">
+                                <th>
+                                    Opgaver
+                                </th>
+                                <th>
+                                    Fakturabel
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="width: 95%;">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Forretningsudvikling
+                                </td>
+                                <td>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value=""></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 95%;">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Grafisk design
+                                </td>
+                                <td>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value=""></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 95%;">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Projektledelse
+
+                                </td>
+                                <td>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" value=""></label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <select class="WorkPicker" multiple="multiple" style="width:100%">
+                    <optgroup label="Seneste">
+                        <option value="R">#Frontend </option>
+                        <option value="C">#SEO</option>
+                        <option value="C">#Database</option>
+                    </optgroup>
+                    <optgroup label="Andre">
+                        <option value="C">#Møde</option>
+                        <option value="M">#Backend</option>
+                        <option value="S">#Hjemmeside</option>
+                    </optgroup>
+                </select>
+                    </div>
+                </div>
+
+                <!-- ASSIGNMENT PICKER END -->
+
+                <br>
+                <br>
+
+                <!-- LABEL PICKER START -->
+
+                <div class="row">
+                    <div class="col-sm-12" class="form-control">
+                        <table class="table">
+                            <tr style="background-color: #F2F2F2">
+                                <th>
+                                    Labels
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="width: 95%;">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Forside
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 95%;">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    SQL
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <select class="WorkPicker" multiple="multiple" style="width:100%">
+                    <optgroup label="Seneste">
+                        <option value="R">#Frontend </option>
+                        <option value="C">#SEO</option>
+                        <option value="C">#Database</option>
+                    </optgroup>
+                    <optgroup label="Andre">
+                        <option value="C">#Møde</option>
+                        <option value="M">#Backend</option>
+                        <option value="S">#Hjemmeside</option>
+                    </optgroup>
+                </select>
+                    </div>
+                </div>
+
+                <!-- LABEL PICKER END -->
+
+                <br>
+                <br>
+                <!-- WORKERS PICKER START -->
+
+                <div class="row">
+                    <div class="col-sm-12" class="form-control">
+                        <table class="table">
+                            <tr style="background-color: #F2F2F2">
+                                <th>
+                                    Tilknyttede medarbejdere
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="width: 95%;">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Mohammed
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 95%;">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Anna
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 95%;">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Lotte
+
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <select class="WorkPicker" multiple="multiple" style="width:100%">
+                    <optgroup label="Seneste">
+                        <option value="R">#Frontend </option>
+                        <option value="C">#SEO</option>
+                        <option value="C">#Database</option>
+                    </optgroup>
+                    <optgroup label="Andre">
+                        <option value="C">#Møde</option>
+                        <option value="M">#Backend</option>
+                        <option value="S">#Hjemmeside</option>
+                    </optgroup>
+                </select>
+                    </div>
+                </div>
+
+                <!-- WORKERS PICKER END -->
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-md-3">
+    </div>
+
+
+    </div>
+    </div>
+
+    <!-- SCRIPTS START -->
+
+    <!-- SELECT2, USED FOR DROPDOWN MENU -->
+
+    <script>
+        $(document).ready(function () {
+            $(".WorkPicker").select2();
+            $(".js_selectFirmaPicker").select2();
+        });
+    </script>
+
+    <!-- SCRIPTS END -->
+</body>
+
+
+</html>

@@ -47,72 +47,52 @@
                 <!-- New Project END -->
 
 
+                <!-- START PROJECT TYPE -->
                 <div class="row">
-                    <!-- START PROJECT TYPE -->
-                    <!-- START TEMPLATE -->
                     <div class="col-md-12">
                         <h3>Projekt Type</h3>
                     </div>
-                    <div>
-                        <div class="col-md-4">
-                            <div>
-                                <button class="btn btn-default" data-toggle="collapse" data-target="#ProjectTypeCollapse1" style="width:100%">Tid &amp; Materialer</button>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div>
-                                <button class="btn btn-default" style="width:100%">Fastlagt Pris</button>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div>
-                                <button class="btn btn-default" style="width:100%">Ferie</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- START COLLAPSE -->
-                    <div id="ProjectTypeCollapse1" class="collapse">
-                        <div class="row">
-                            <!-- START GEM TEMPLATE -->
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8 css_divPadding-top">
-                                <div class="row" style="padding-top: 20px;">
-                                    <div class="col-md-8">
-
-                                        <div>
-                                            <label>Faktureringsmetode</label>
-                                            <select class="js_selectFirmaPicker" style="width:100%">
-                                                    <option value="">Ingen faktureringsmetode valgt</option>
-                                                    <option value="P">Projekt timepris</option>
-                                                    <option value="I">Person timepris</option>
-                                                    <option value="M">Opgave timepris</option>
-                                                </select>
-                                        </div>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel">
+                            <div class="row">
+                                <div class="col-md-4 css_divPadding-top">
+                                    <div>
+                                        <a class="btn btn-default active" data-parent="#accordion" data-toggle="collapse" href="#collapse1" style="width:100%">Tid &amp; Materialer</a>
                                     </div>
-                                    <div class="col-md-4">
-                                        <label>Pris</label>
-                                        <input type="text" class="form-control">
+                                </div>
+                                <div class="col-md-4 css_divPadding-top">
+                                    <div>
+                                        <a class="btn btn-default" data-parent="#accordion" data-toggle="collapse" href="#collapse2" style="width:100%">Fastlagt Pris</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 css_divPadding-top">
+                                    <div>
+                                        <a class="btn btn-default" data-parent="#accordion" data-toggle="collapse" href="#collapse3" style="width:100%">Non-Billable</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2"></div>
-                        </div>
-                        <div class="row">
-                            <!-- START GEM TEMPLATE -->
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
+
+                            <!-- START TIDER & MATERIALER COLLAPSE -->
+                            <div id="collapse1" class="panel-collapse collapse in">
                                 <div class="css_divPadding-top">
-                                    <label>Budget</label>
-                                    <br>
+                                    <h4><strong>Faktureringsmetode</strong></h4>
                                     <select class="js_selectFirmaPicker" style="width:100%">
-                                                    <option value="I">Ingen faktureringsmetode valgt</option>
-                                                    <option value="M">Samlet projekttimer</option>
-                                                    <option value="">Samlet projektudgifter</option>
-                                                    <option value="">Timer pr. opgave</option>
-                                                    <option value="">Timer pr. person</option>
-                                                    <option value="">Udgifter pr. opgave</option>
-                                                </select>
+                                            <option value="">Ingen faktureringsmetode valgt</option>
+                                            <option value="P">Projekt timepris</option>
+                                            <option value="I">Person timepris</option>
+                                            <option value="M">Opgave timepris</option>
+                                        </select>
+                                </div>
+                                <div class="css_divPadding-top">
+                                    <h4><strong>Budget</strong></h4>
+                                    <select class="js_selectFirmaPicker" style="width:100%">
+                                            <option value="I">Ingen faktureringsmetode valgt</option>
+                                            <option value="M">Samlet projekttimer</option>
+                                            <option value="">Samlet projektudgifter</option>
+                                            <option value="">Timer pr. opgave</option>
+                                            <option value="">Timer pr. person</option>
+                                            <option value="">Udgifter pr. opgave</option>
+                                        </select>
                                     <br>
                                     <div class="css_divPadding-top">
 
@@ -124,20 +104,54 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2"></div>
-                        </div>
-                    </div>
-                    <!-- END COLLAPSE -->
+                            <!-- END TIDER & MATERIALER COLLAPSE -->
 
+                            <!-- START FASTLAGT PRIS COLLAPSE -->
+                            <div id="collapse2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="css_divPadding-top">
+                                        <div class="form-inline">
+                                            <h4><strong>Faktureringsmetode</strong></h4>
+                                            <p class="help-block">Indsæt det totale beløb du vil bruge på projektet</p>
+                                            <label>kr.</label> <input type="text" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END FASTLAGT PRIS COLLAPSE -->
+
+                            <!-- START NON-BILLABLE COLLAPSE -->
+                            <div id="collapse3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="css_divPadding-top">
+                                        <h4><strong>Budget</strong></h4>
+                                        <select class="js_selectFirmaPicker" style="width:100%">
+                                            <option value="I">Ingen faktureringsmetode valgt</option>
+                                            <option value="M">Samlet projekttimer</option>
+                                            <option value="">Samlet projektudgifter</option>
+                                            <option value="">Timer pr. opgave</option>
+                                            <option value="">Timer pr. person</option>
+                                            <option value="">Udgifter pr. opgave</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END NON-BILLABLE COLLAPSE -->
+
+                        </div>
+                        <!-- END PANEL-GROUP -->
+                    </div>
+                    <!-- END PROJECT TYPE -->
                 </div>
-                <!-- END PROJECT TYPE -->
+
+
 
                 <hr>
                 <br>
 
                 <!-- ASSIGNMENT PICKER START -->
                 <div class="row">
-                    <div class="col-sm-12" class="form-control">
+                    <div class="col-sm-12">
                         <table class="table">
                             <tr style="background-color: #F2F2F2">
                                 <th>
@@ -313,6 +327,9 @@
 
     </div>
     </div>
+
+    <!-- LINK TO SCRIPT.JS -->
+    <script src="script.js"></script>
 
     <!-- SCRIPTS START -->
 

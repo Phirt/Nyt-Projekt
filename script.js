@@ -2,9 +2,9 @@ $(document).ready(function () {
 
 
     //ADD ACTIVE CLASS TO BUTTON WHEN PRESSED
-    $('#accordion .btn').on('click', function() {
+    $('#accordion .btn').on('click', function () {
         //CHECK IF CLASS HAS ACTIVE
-        if($(this).hasClass('active')) {
+        if ($(this).hasClass('active')) {
             $('#accordion .btn').removeClass('active');
             return true;
         }
@@ -34,4 +34,10 @@ $(document).ready(function () {
             $(".js_projectHide").show();
         }
     });
+});
+
+//Tooltip hover for the questionmark
+
+$(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
 });

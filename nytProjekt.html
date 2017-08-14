@@ -59,20 +59,34 @@
                 </div>
 
                 <!-- New Project START -->
-                <div>
-                    <form>
-                        <label>Firma navn</label><input class="form-control" type="text" name="businessName">
-                        <br>
-                        <label>Projekt navn</label><input class="form-control" type="text" name="projectName">
-                        <br>
-                        <label>Start dato</label><input class="form-control" type="date" name="date" id="dateofbirth" />
-                        <br>
-                        <label>Note</label><textarea class="form-control" placeholder="Valgfrit"></textarea>
-                    </form>
-                    <hr>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class='table removeBordersTable'>
+                            <tr>
+                                <td class="col-sm-2" style="text-align: left"><label>Firma</label></td>
+                                <td class="col-sm-8"><input class="form-control" style="padding: 0px" type="text" name="businessName"></td>
+                                <td class="col-sm-2"><button class="btn btn-default centerButton"><span class="glyphicon glyphicon-plus"></span> Tilføj firma</button></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-2" style="text-align: left"><label>Projekt navn</label></td>
+                                <td class="col-sm-10"><input class="form-control" type="text" name="businessName"></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-2" style="text-align: left"><label></a> Start dato </label>
+                                    <a style="float: right" class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Valgfri, men anbefales. Hvis startdato ikke vælges, bliver den automatisk sat til dato ved første tidsregistrering."></td>
+                                <td class="col-sm-10"><input class="form-control" type="date" name="date" id="dateofbirth" /></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-2" style="text-align: left"><label>Note </label><a style="float: right" class="glyphicon glyphicon-info-sign" data-toggle="tooltip"
+                                        title="Valgfri, men anbefales. Tilføj note."></a> </td>
+                                <td class="col-sm-10"><textarea class="form-control" type="text" name="businessName"></textarea>
+                                    <p style="font-style: italic">Noter kan kun ses af administrator</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
                 <!-- New Project END -->
-
 
                 <!-- START PROJECT TYPE -->
                 <div class="row">

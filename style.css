@@ -27,3 +27,21 @@
 .css_divPadding-bottom {
     padding-bottom: 20px;
 }
+
+.css_noPaddingTopBottom {
+    padding-top:0; padding-bottom:0;
+}
+
+.css_noPaddingLeftRight {
+        padding-left:0; padding-right:0;
+}
+
+.js_taskHide {
+     display: none;
+}
+.js_personHide {
+     display: none;
+}
+.js_projectHide {
+     display: none;
+}

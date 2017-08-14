@@ -27,3 +27,18 @@
 .css_divPadding-bottom {
     padding-bottom: 20px;
 }
+
+.css_removePadding {
+    padding: 0;
+}
+
+.css_padding5px {
+    padding: 5px 5px 5px 5px;
+  }
+
+/* 
+    FOR AT FIKSE SCROLLING MENS MODAL ER ÅBEN 
+*/
+.modal-open {
+    overflow: visible; /* DEFAULT: hidden */
+}

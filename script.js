@@ -2,8 +2,12 @@ $(document).ready(function () {
 
 
     //ADD ACTIVE CLASS TO BUTTON WHEN PRESSED
-    $('#accordion .btn').on('click', function () {
-
+    $('#accordion .btn').on('click', function() {
+        //CHECK IF CLASS HAS ACTIVE
+        if($(this).hasClass('active')) {
+            $('#accordion .btn').removeClass('active');
+            return true;
+        }
         //REMOVE ACTIVE CLASS ON ALL BUTTONS 
         $('#accordion .btn').removeClass('active');
 
@@ -21,16 +25,12 @@ $(document).ready(function () {
         $(".js_projectHide").hide();
 
         if ($("#js_Select").val() === "Task") {
-            console.log($("#js_Select").val());
             $(".js_taskHide").show();
-            //$('td:nth-child(2)').show();
         }
         if ($("#js_Select").val() === "Person") {
-            console.log($("#js_Select").val());
             $(".js_personHide").show();
         }
         if ($("#js_Select").val() === "Project") {
-            console.log($("#js_Select").val());
             $(".js_projectHide").show();
         }
     });

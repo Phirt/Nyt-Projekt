@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <!-- SELECT2 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
@@ -16,6 +17,32 @@
 </head>
 
 <body>
+
+    <!-- START NAVBAR -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </button>
+                <a class="navbar-brand" style="color: white" href="#">Alpha Solutions A/S</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Tidsregistrering</a></li>
+                    <li class="active"><a href="#">Projekter</a></li>
+                    <li><a href="#">Rapporter</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrér</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log ind</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END NAVBAR -->
     <div class="container-fluid">
         <div class="row">
 
@@ -139,7 +166,7 @@
                                 <div class="panel-body">
                                     <div class="css_divPadding-top">
                                         <h4><strong>Budget</strong></h4>
-                                        <select class="js_selectFirmaPicker" style="width:100%">
+                                        <select class="js_select2" style="width:100%">
                                             <option value="I">Ingen faktureringsmetode valgt</option>
                                             <option value="M">Samlet projekttimer</option>
                                             <option value="">Samlet projektudgifter</option>
@@ -155,8 +182,8 @@
                         </div>
                         <!-- END PANEL-GROUP -->
                     </div>
-                    <!-- END PROJECT TYPE -->
                 </div>
+                <!-- END PROJECT TYPE / ROW -->
 
 
 
@@ -168,14 +195,14 @@
                     <div class="col-sm-12">
                         <table class="table">
                             <tr style="background-color: #F2F2F2">
-                                <th style="width: 95%">
+                                <th style="width: 65%">
                                     Opgaver
                                 </th>
-                                <th>
+                                <th style="text-align: center">
                                     Fakturabel
                                 </th>
 
-                                <th class="js_taskHide">
+                                <th class="js_taskHide" style="text-align: center">
                                     Timepris
                                 </th>
                             </tr>
@@ -247,7 +274,7 @@
 
                 <div class="row">
                     <div class="col-sm-12">
-                        <select class="WorkPicker" multiple="multiple" style="width:100%">
+                        <select class="js_select2" multiple="multiple" style="width:100%">
                     <optgroup label="Seneste">
                         <option value="R">#Frontend </option>
                         <option value="C">#SEO</option>
@@ -264,7 +291,7 @@
 
                 <!-- ASSIGNMENT PICKER END -->
 
-                <br>
+                <hr>
                 <br>
 
                 <!-- LABEL PICKER START -->
@@ -294,7 +321,7 @@
 
                 <div class="row">
                     <div class="col-sm-12">
-                        <select class="WorkPicker" multiple="multiple" style="width:100%">
+                        <select class="js_select2" multiple="multiple" style="width:100%">
                     <optgroup label="Seneste">
                         <option value="R">#Frontend </option>
                         <option value="C">#SEO</option>
@@ -311,7 +338,7 @@
 
                 <!-- LABEL PICKER END -->
 
-                <br>
+                <hr>
                 <br>
 
                 <!-- WORKERS PICKER START -->
@@ -367,7 +394,7 @@
 
                 <div class="row">
                     <div class="col-sm-12">
-                        <select class="WorkPicker" multiple="multiple" style="width:100%">
+                        <select class="js_select2" multiple="multiple" style="width:100%">
                     <optgroup label="Seneste">
                         <option value="R">#Frontend </option>
                         <option value="C">#SEO</option>
@@ -381,21 +408,36 @@
                 </select>
                     </div>
                 </div>
-
                 <!-- WORKERS PICKER END -->
 
+                <hr>
+                <br>
+
+                <!-- START LAV NY TEMPLATE BUTTON -->
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#NyTemplateCollapse">Lav ny template</button>
+                    </div>
+                </div>
+                <!-- END LAV NY TEMPLATE BUTTON -->
+
+                <hr>
+                <br>
+
             </div>
+            <!-- END COL-MD-6 -->
+
+
+
+            <div class="col-md-3">
+            </div>
+
         </div>
-
+        <!-- END ROW -->
     </div>
+    <!-- END CONTAINER -->
 
 
-    <div class="col-md-3">
-    </div>
-
-
-    </div>
-    </div>
 
     <!-- LINK TO SCRIPT.JS -->
     <script src="script.js"></script>
@@ -406,13 +448,166 @@
 
     <script>
         $(document).ready(function () {
-            $(".WorkPicker").select2();
-            $(".js_selectFirmaPicker").select2();
+            $(".js_select2").select2();
+            $(".modal .js_select2").select2();
         });
     </script>
 
     <!-- SCRIPTS END -->
 </body>
 
-
 </html>
+
+
+<!-- START TEMPLATE FORM -->
+<div id="NyTemplateCollapse" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ny Template</h4>
+            </div>
+            <div class="modal-body">
+                <!-- START FORM TAG -->
+                <form>
+
+                    <!-- START EKSISTERENDE TEMPLATE -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Brug eksisterende templates</h5>
+                        </div>
+                        <div>
+                            <div class="col-md-3">
+                                <div class="css_padding5px">
+                                    <a class="btn btn-primary" style="width:100%">Barn Syg</a>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="css_padding5px">
+                                    <a class="btn btn-primary" style="width:100%">Syg</a>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="css_padding5px">
+                                    <a class="btn btn-primary" style="width:100%">Ferie</a>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="css_padding5px">
+                                    <select class="js_select2" style="width:100%">
+                                        <option value="I">Scrum Møde</option>
+                                        <option value="M">Pause</option>
+                                        <option value="M">Orlov</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END EKSISTERENDE TEMPLATE -->
+
+                    <!-- START Tidsregistrering TITEL -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hr>
+                            <h4>Tidsregistrering</h4>
+                        </div>
+                    </div>
+                    <!-- END Tidsregistrering TITEL -->
+
+
+                    <!-- START FIRMA/PROJEKT -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Firma</label>
+                            <select class="js_select2" style="width:100%">
+                                <option value="I">IKEA</option>
+                                <option value="M">Mash</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label>Projekt</label>
+                            <select class="js_select2" style="width:100%">
+                                <option value="AL">Hjemmeside</option>
+                                <option value="WY">App</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- END FIRMA/PROJEKT -->
+                    <br>
+                    <!-- START LABELS/MEDARBEJDERE -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Labels</label>
+                            <br>
+                            <select class="js_select2" multiple="multiple" style="width:100%">
+                                <optgroup label="Seneste">
+                                    <option value="R">#Frontend </option>
+                                    <option value="C">#SEO</option>
+                                    <option value="C">#Database</option>
+                                </optgroup>
+                                <optgroup label="Andre">
+                                    <option value="C">#Møde</option>
+                                    <option value="M">#Backend</option>
+                                    <option value="S">#Hjemmeside</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Medarbejdere</label>
+                            <br>
+                            <select class="js_select2" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                <optgroup label="Seneste">
+                                    <option selected="selected" value="R">Philip 👤 </option>
+                                    <option value="C">Mikkel 👤</option>
+                                    <option value="P">Peter 👤</option>
+                                </optgroup>
+                                <optgroup label="Andre">
+                                    <option value="C">Jens 👤</option>
+                                    <option value="M">Maria 👤</option>
+                                    <option value="S">Lone 👤</option> 
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- END LABELS/MEDARBEJDERE -->
+
+                </form>
+                <!-- END FORM TAG -->
+
+                <br>
+
+                <!-- START MODAL-FOOTER -->
+                <div class="modal-footer">
+                    <div class="row" style="padding: 10px">
+                        <div class="col-md-6">
+                            <div class="css_padding5px">
+                                <input style="float: left" type="checkbox" checked data-toggle="toggle" data-on="Fakturerbar" data-off="Ikke fakturerbar"
+                                    data-onstyle="success" data-offstyle="danger" data-width="100%">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="col-md-6 css_removePadding">
+                                <div class="css_padding5px">
+                                    <button class="btn btn-primary" data-dismiss="modal" style="width:100%">Gem template</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 css_removePadding">
+                                <div class="css_padding5px">
+                                    <button class="btn btn-default" data-dismiss="modal" style="width:100%">Luk</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MODAL-FOOTER -->
+
+            </div>
+            <!-- END MODAL-BODY -->
+        </div>
+        <!-- END MODAL-CONTENT -->
+    </div>
+    <!-- END MODAL-DIALOG -->
+</div>
+<!-- END MODAL -->

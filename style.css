@@ -42,3 +42,20 @@
 .modal-open {
     overflow: visible; /* DEFAULT: hidden */
 }
+
+/*
+    NAVBAR STUFF
+*/
+.navbar-inverse {
+    background-color: #5A93C4;
+    border-color: #E7E7E7;
+    color: white;
+}
+
+.nav.navbar-nav li a {
+   color: #fff;
+ }
+
+ .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: #1773C3;
+ }

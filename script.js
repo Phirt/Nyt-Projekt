@@ -58,19 +58,19 @@ $(document).ready(function () {
                         .append(' ' + $(this).val())
                     )
                     .append($('<td>')
-                        .append($('<div class="checkbox">')
+                        .append($('<div class="ui checkbox">')
                             .append($('<label><input type="checkbox" value=""></label>')
                             )
                         )
                     )
                     .append($('<td>')
-                        .append($('<div class="checkbox">')
+                        .append($('<div class="ui checkbox">')
                             .append($('<label><input type="checkbox" value=""></label>')
                             )
                         )
                     )
                     .append($('<td>')
-                        .append($('<div class="checkbox">')
+                        .append($('<div class="ui checkbox">')
                             .append($('<label><input type="checkbox" value=""></label>')
                             )
                         )
@@ -97,9 +97,9 @@ $(document).ready(function () {
 
 
     });
-
+   
     //TO ADD A NEW TASK IN TASK TABLE
-    $('#taskInput').on('keydown', function (e) {
+    $('#taskInput').on('keypress', function (e) {
         if (e.keyCode == 13) {
             $("#taskTable")
                 .append($('<tr>')
@@ -111,8 +111,8 @@ $(document).ready(function () {
                         .append(' ' + $(this).val())
                     )
                     .append($('<td>')
-                        .append($('<div class="checkbox">')
-                            .append($('<label><input type="checkbox" value=""></label>')
+                        .append($('<div class="ui checkbox">')
+                            .append($('<label><input type="ui checkbox" value=""></label>')
                             )
                         )
                     )
@@ -161,21 +161,22 @@ $(document).ready(function () {
     });
 });
 
-//Tooltip hover for the questionmark
+//Tooltip hover for the questionmark & Template
 
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
+    $("#opretTemplate").on("click", function () {
+        $('#templateCollapse').on('shown.bs.collapse', function () {
+            $('html, body').animate({
+                scrollTop: $("footer").offset().top
+            }, 1);
+        })
+
+    });
 });
 
 
-$("#opretTemplate").on("click", function () {
-    $('#templateCollapse').on('shown.bs.collapse', function () {
-        $('html, body').animate({
-            scrollTop: $("footer").offset().top
-        }, 1);
-    })
 
-});
 
 // SELECT2 AND SEMANTIC UI
 $(document).ready(function () {

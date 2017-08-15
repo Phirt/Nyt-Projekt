@@ -1,4 +1,6 @@
-
+body {
+    background-color: white;
+}
 /* TABLTE TD CENTEr */
 .table td {
    text-align: center;   

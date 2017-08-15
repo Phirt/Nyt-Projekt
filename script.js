@@ -102,4 +102,6 @@ $(document).ready(function () {
 
     // SEMANTIC UI STUFF
     $('.ui.checkbox').checkbox();
+
+
 });

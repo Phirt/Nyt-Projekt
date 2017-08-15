@@ -165,6 +165,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
+<<<<<<< HEAD
     $("#opretTemplate").on("click", function () {
         $('#templateCollapse').on('shown.bs.collapse', function () {
             $('html, body').animate({
@@ -175,6 +176,20 @@ $(document).ready(function () {
     });
 });
 
+
+
+=======
+
+    $("#opretTemplate").on("click", function () {
+        $('#templateCollapse').on('shown.bs.collapse', function () {
+            $('html, body').animate({
+                scrollTop: $("footer").offset().top
+            }, 1);
+        })
+
+    });
+});
+>>>>>>> 47e1768dcbd24ccd9a581b87eae6b80b57a15223
 
 
 
@@ -195,6 +210,12 @@ $(document).ready(function () {
             text: 'Tilføj medarbejder'
         }
     });
+
+    $(".js_select2Fakturabel").select2({
+        minimumResultsForSearch: -1
+    });
+
+    
 
     $(".modal .js_select2").select2();
 

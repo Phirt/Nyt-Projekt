@@ -7,7 +7,7 @@ body {
 }
 
 table th {
-    background-color: #1773C3;
+    background-color: #5A93C4;
     color: white;
 }
 
@@ -105,4 +105,9 @@ footer {
     background-color: #5A93C4;
     clear: left;
     text-align: center;
+}
+
+
+@media screen and (max-width: 767px) {
+
 }

@@ -78,10 +78,24 @@
     background-color: #1773C3;
  }
 
+ /* CHANGE COLOR OF HR */
  hr {
     border: none;
     height: 1px;
     /* Set the hr color */
     color: #BBBBBB; /* old IE */
     background-color: #BBBBBB; /* Modern Browsers */
+}
+
+ /* REMOVE BORDERS ON TABLE */
+.table.removeBordersTable tr td, .table.removeBordersTable tr th {
+    border-width: 0;
+}
+
+footer {
+    padding: 1em;
+    color: white;
+    background-color: #5A93C4;
+    clear: left;
+    text-align: center;
 }

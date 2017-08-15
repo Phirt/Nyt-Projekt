@@ -67,11 +67,18 @@ $(document).ready(function () {
     });
 });
 
-<<<<<<< HEAD
-=======
-//Tooltip hover for the questionmark
-
+//Tooltip hover for the questionm   ark
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
->>>>>>> origin/master
+
+
+$("#opretTemplate").on("click", function () {
+    $('#templateCollapse').on('shown.bs.collapse', function () {
+        $('html, body').animate({
+            scrollTop: $("footer").offset().top
+        }, 1);
+    })
+
+});
+

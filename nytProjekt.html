@@ -97,67 +97,66 @@
                 <hr>
                 <!-- START PROJECT TYPE -->
                 <div class="row">
+                    <div class="col-sm-12">
                     <table class="table">
                         <tr>
                             <th>Projekt Type</th>
                         </tr>
                         <tr>
                             <td>
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel">
+                                        <div class="row">
+                                            <div class="col-md-4 css_divPadding-top">
+                                                <div>
+                                                    <a class="btn btn-default active" data-parent="#accordion" data-toggle="collapse" href="#collapseTidOgMaterialer" style="width:100%">Tid &amp; Materialer</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 css_divPadding-top">
+                                                <div>
+                                                    <a class="btn btn-default" data-parent="#accordion" data-toggle="collapse" href="#collapseFastlagtPris" style="width:100%">Fastlagt Pris</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 css_divPadding-top">
+                                                <div>
+                                                    <a class="btn btn-default" data-parent="#accordion" data-toggle="collapse" href="#collapseNonBillable" style="width:100%">Non-Billable</a>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                           
-                    <div class="panel-group" id="accordion">
-                        <div class="panel">
-                            <div class="row">
-                                <div class="col-md-4 css_divPadding-top">
-                                    <div>
-                                        <a class="btn btn-default active" data-parent="#accordion" data-toggle="collapse" href="#collapseTidOgMaterialer" style="width:100%">Tid &amp; Materialer</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 css_divPadding-top">
-                                    <div>
-                                        <a class="btn btn-default" data-parent="#accordion" data-toggle="collapse" href="#collapseFastlagtPris" style="width:100%">Fastlagt Pris</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 css_divPadding-top">
-                                    <div>
-                                        <a class="btn btn-default" data-parent="#accordion" data-toggle="collapse" href="#collapseNonBillable" style="width:100%">Non-Billable</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- START TIDER & MATERIALER COLLAPSE -->
-                            <div id="collapseTidOgMaterialer" class="panel-collapse collapse in">
-                                <div class="css_expandMarginPadding" style="text-align: left;">
-                                    <h4><strong>Faktureringsmetode</strong></h4>
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <select class="form-control css_noPaddingTopBottom" id="js_dropdownTidFaktureringSelect">
+                                        <!-- START TIDER & MATERIALER COLLAPSE -->
+                                        <div id="collapseTidOgMaterialer" class="panel-collapse collapse in">
+                                            <div class="css_expandMarginPadding" style="text-align: left;">
+                                                <h4><strong>Faktureringsmetode</strong></h4>
+                                                <div class="row">
+                                                    <div class="col-md-8">
+                                                        <select class="form-control css_noPaddingTopBottom" id="js_dropdownTidFaktureringSelect">
                                             <option value="">Ingen faktureringsmetode valgt</option>
                                             <option value="Project">Projekt timepris</option>
                                             <option value="Person">Person timepris</option>
                                             <option value="Task">Opgave timepris</option>
                                         </select>
-                                        </div>
-                                        <!-- -->
-                                        <!-- START Fakturering Project timepris-->
-                                        <div class="col-md-4 js_tableFaktureringProjectHide">
-                                            <div class="col-md-4 css_noPaddingLeftRight">
-                                                <div style="float:right; padding-right:5; font-size: 16px;">
-                                                    <b>kr.</b>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8 css_noPaddingLeftRight">
-                                                <input class="form-control">
-                                            </div>
-                                        </div>
-                                        <!-- END Fakturering Project timepris-->
+                                                    </div>
+                                                    <!-- -->
+                                                    <!-- START Fakturering Project timepris-->
+                                                    <div class="col-md-4 js_tableFaktureringProjectHide">
+                                                        <div class="col-md-4 css_noPaddingLeftRight">
+                                                            <div style="float:right; padding-right:5; font-size: 16px;">
+                                                                <b>kr.</b>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                                            <input class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <!-- END Fakturering Project timepris-->
 
-                                    </div>
-                                    
-                                    <div class="css_divPadding-top">
-                                        <h4><strong>Budget</strong></h4>
-                                        <div class="col-md-8 css_removePadding">
-                                            <select class="form-control css_noPaddingTopBottom" id="js_dropdownTidBudgetSelect">
+                                                </div>
+
+                                                <div class="css_divPadding-top">
+                                                    <h4><strong>Budget</strong></h4>
+                                                    <div class="col-md-8 css_removePadding">
+                                                        <select class="form-control css_noPaddingTopBottom" id="js_dropdownTidBudgetSelect">
                                             <option value="">Ingen faktureringsmetode valgt</option>
                                             <option value="ProjektTimer">Samlet projekttimer</option>
                                             <option value="ProjektPris">Samlet projektudgifter</option>
@@ -165,68 +164,68 @@
                                             <option value="PersonTimer">Timer pr. person</option>
                                             <option value="OpgavePris">Udgifter pr. opgave</option>
                                         </select>
+                                                    </div>
+
+
+
+                                                    <!-- START Budget samlet projekttimer -->
+                                                    <div class="col-md-3 js_tableBudgetProjektTimerHide">
+                                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                                            <div class="css_noPaddingLeftRight">
+                                                                <input class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 css_noPaddingLeftRight">
+                                                            <div style="float:left; padding-right:5; font-size: 16px;">
+                                                                <b>timer</b>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END Budget samlet projektudgifter -->
+
+                                                    <div class="col-md-3 js_tableBudgetProjektPrisHide">
+                                                        <div class="col-md-4 css_noPaddingLeftRight">
+                                                            <div style="float:right; padding-right:5; font-size: 16px;">
+                                                                <b>kr.</b>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                                            <input class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <!-- END NON-BILLABLE COLLAPSE -->
+
+                                                    <br>
+                                                    <div class="css_divPadding-top">
+
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"><input type="checkbox" value=""> Send email, hvis projektet overstiger</span>
+                                                            <input id="msg" type="text" class="form-control" name="msg" placeholder="%">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- END PANEL-GROUP -->
+                                            </div>
                                         </div>
+                                        <!-- END TIDER & MATERIALER COLLAPSE -->
 
-
-
-                                        <!-- START Budget samlet projekttimer -->
-                                        <div class="col-md-3 js_tableBudgetProjektTimerHide">
-                                            <div class="col-md-8 css_noPaddingLeftRight">
-                                                <div class="css_noPaddingLeftRight">
-                                                    <input class="form-control">
+                                        <!-- START FASTLAGT PRIS COLLAPSE -->
+                                        <div id="collapseFastlagtPris" class="panel-collapse collapse">
+                                            <div class="css_expandMarginPadding" style="text-align: left;">
+                                                <div class="form-inline">
+                                                    <h4><strong>Faktureringsmetode</strong></h4>
+                                                    <p class="help-block">Indsæt det totale beløb du vil bruge på projektet</p>
+                                                    <label>kr.</label> <input type="text" class="form-control" />
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 css_noPaddingLeftRight">
-                                                <div style="float:left; padding-right:5; font-size: 16px;">
-                                                    <b>timer</b>
-                                                </div>
-                                            </div>
                                         </div>
-                                        <!-- END Budget samlet projektudgifter -->
+                                        <!-- END FASTLAGT PRIS COLLAPSE -->
 
-                                        <div class="col-md-3 js_tableBudgetProjektPrisHide">
-                                            <div class="col-md-4 css_noPaddingLeftRight">
-                                                <div style="float:right; padding-right:5; font-size: 16px;">
-                                                    <b>kr.</b>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8 css_noPaddingLeftRight">
-                                                <input class="form-control">
-                                            </div>
-                                        </div>
-                                        <!-- END NON-BILLABLE COLLAPSE -->
-
-                                        <br>
-                                        <div class="css_divPadding-top">
-
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><input type="checkbox" value=""> Send email, hvis projektet overstiger</span>
-                                                <input id="msg" type="text" class="form-control" name="msg" placeholder="%">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END PANEL-GROUP -->
-                                </div>
-                            </div>
-                            <!-- END TIDER & MATERIALER COLLAPSE -->
-
-                            <!-- START FASTLAGT PRIS COLLAPSE -->
-                            <div id="collapseFastlagtPris" class="panel-collapse collapse">
-                                <div class="css_expandMarginPadding" style="text-align: left;">
-                                    <div class="form-inline">
-                                        <h4><strong>Faktureringsmetode</strong></h4>
-                                        <p class="help-block">Indsæt det totale beløb du vil bruge på projektet</p>
-                                        <label>kr.</label> <input type="text" class="form-control" />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END FASTLAGT PRIS COLLAPSE -->
-
-                            <!-- START NON-BILLABLE COLLAPSE -->
-                            <div id="collapseNonBillable" class="panel-collapse collapse">
-                                <div class="css_expandMarginPadding" style="text-align: left;">
-                                    <h4><strong>Budget</strong></h4>
-                                    <select class="js_select2" style="width:30%">
+                                        <!-- START NON-BILLABLE COLLAPSE -->
+                                        <div id="collapseNonBillable" class="panel-collapse collapse">
+                                            <div class="css_expandMarginPadding" style="text-align: left;">
+                                                <h4><strong>Budget</strong></h4>
+                                                <select class="js_select2" style="width:30%">
                                         <option value="I">Ingen faktureringsmetode valgt</option>
                                         <option value="M">Samlet projekttimer</option>
                                         <option value="">Samlet projektudgifter</option>
@@ -234,186 +233,186 @@
                                         <option value="">Timer pr. person</option>
                                         <option value="">Udgifter pr. opgave</option>
                                     </select>
-                                </div>
-                            </div>
-                            <!-- END NON-BILLABLE COLLAPSE -->
+                                            </div>
+                                        </div>
+                                        <!-- END NON-BILLABLE COLLAPSE -->
                             </td>
                         </tr>
                     </table>
-
-                </div>
-                <!-- END PROJECT TYPE / ROW -->
-
-
-
-                <hr>
-                <br>
-
-                <!-- ASSIGNMENT PICKER START -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <table class="table" id="taskTable">
-                            <tr style="background-color: #F2F2F2">
-                                <th style="width: 40%">
-                                    Opgaver
-                                </th>
-                                <th style="text-align: center">
-                                    Fakturabel
-                                </th>
-
-                                <th class="js_tableFaktureringOpgaveHide" style="text-align: center">
-                                    Timepris
-                                </th>
-                                <th class="js_tableBudgetOpgavePrisHide" style="text-align: center">
-                                    Budget
-                                </th>
-                                <th class="js_tableBudgetOpgaveTimerHide" style="text-align: center">
-                                    Budget(timer)
-                                </th>
-
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Forretningsudvikling
-                                </td>
-                                <td>
-                                    <select class="js_select2Fakturabel" style="width:100%">
-                                        <optgroup label="Vælg venligst">
-                                            <option value="ja">Ja</option>
-                                            <option value="null">-</option>
-                                            <option value="Nej">Nej</option>
-                                        </optgroup>
-                                    </select>
-                                </td>
-                                <td class="js_tableFaktureringOpgaveHide">
-                                    <div class="col-md-4 css_noPaddingLeftRight">
-                                        <div style="float:right; padding-right:5">
-                                            <b>kr.</b>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 css_noPaddingLeftRight">
-                                        <input class="form-control">
-                                    </div>
-                                </td>
-                                <td class="js_tableBudgetOpgavePrisHide">
-                                    <div class="col-md-4 css_noPaddingLeftRight">
-                                        <div style="float:right; padding-right:5">
-                                            <b>kr.</b>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 css_noPaddingLeftRight">
-                                        <input class="form-control">
-                                    </div>
-                                </td>
-                                <td class="js_tableBudgetOpgaveTimerHide">
-                                    <div class="col-md-2 css_noPaddingLeftRight">
-                                    </div>
-                                    <div class="col-md-8 css_noPaddingLeftRight">
-                                        <input class="form-control">
-                                    </div>
-                                    <div class="col-md-2 css_noPaddingLeftRight">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Grafisk design
-                                </td>
-                                <td>
-                                    <select class="js_select2Fakturabel" style="width:100%">
-                                        <optgroup label="Vælg venligst">
-                                            <option value="ja">Ja</option>
-                                            <option value="null">-</option>
-                                            <option value="Nej">Nej</option>
-                                        </optgroup>
-                                    </select>
-                                </td>
-                                <td class="js_tableFaktureringOpgaveHide">
-                                    <div class="col-md-4 css_noPaddingLeftRight">
-                                        <div style="float:right; padding-right:5">
-                                            <b>kr.</b>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 css_noPaddingLeftRight">
-                                        <input class="form-control">
-                                    </div>
-                                </td>
-                                <td class="js_tableBudgetOpgavePrisHide">
-                                    <div class="col-md-4 css_noPaddingLeftRight">
-                                        <div style="float:right; padding-right:5">
-                                            <b>kr.</b>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 css_noPaddingLeftRight">
-                                        <input class="form-control">
-                                    </div>
-                                </td>
-                                <td class="js_tableBudgetOpgaveTimerHide">
-                                    <div class="col-md-2 css_noPaddingLeftRight">
-                                    </div>
-                                    <div class="col-md-8 css_noPaddingLeftRight">
-                                        <input class="form-control">
-                                    </div>
-                                    <div class="col-md-2 css_noPaddingLeftRight">
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Projektledelse
-
-                                </td>
-                                <td>
-                                    <select class="js_select2Fakturabel" style="width:100%">
-                                        <optgroup label="Vælg venligst">
-                                            <option value="ja">Ja</option>
-                                            <option value="null">-</option>
-                                            <option value="Nej">Nej</option>
-                                        </optgroup>
-                                    </select>
-                                </td>
-                                <td class="js_tableFaktureringOpgaveHide">
-                                    <div class="col-md-4 css_noPaddingLeftRight">
-                                        <div style="float:right; padding-right:5">
-                                            <b>kr.</b>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 css_noPaddingLeftRight">
-                                        <input class="form-control">
-                                    </div>
-                                </td>
-                                <td class="js_tableBudgetOpgavePrisHide">
-                                    <div class="col-md-4 css_noPaddingLeftRight">
-                                        <div style="float:right; padding-right:5">
-                                            <b>kr.</b>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8 css_noPaddingLeftRight">
-                                        <input class="form-control">
-                                    </div>
-                                </td>
-                                <td class="js_tableBudgetOpgaveTimerHide">
-                                    <div class="col-md-2 css_noPaddingLeftRight">
-                                    </div>
-                                    <div class="col-md-8 css_noPaddingLeftRight">
-                                        <input class="form-control">
-                                    </div>
-                                    <div class="col-md-2 css_noPaddingLeftRight">
-                                    </div>
-                                </td>
-                            </tr>
-
-                        </table>
-
+</div>
                     </div>
-                </div>
-
-                <div>
-                    <input class="form-control" id="taskInput" type="text" placeholder="Tilføj opgave"/>
-                </div>
+                    <!-- END PROJECT TYPE / ROW -->
 
 
-                <!-- 
+
+                    <hr>
+                    <br>
+
+                    <!-- ASSIGNMENT PICKER START -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="table" id="taskTable">
+                                <tr style="background-color: #F2F2F2">
+                                    <th style="width: 40%">
+                                        Opgaver
+                                    </th>
+                                    <th style="text-align: center">
+                                        Fakturabel
+                                    </th>
+
+                                    <th class="js_tableFaktureringOpgaveHide" style="text-align: center">
+                                        Timepris
+                                    </th>
+                                    <th class="js_tableBudgetOpgavePrisHide" style="text-align: center">
+                                        Budget
+                                    </th>
+                                    <th class="js_tableBudgetOpgaveTimerHide" style="text-align: center">
+                                        Budget(timer)
+                                    </th>
+
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                        Forretningsudvikling
+                                    </td>
+                                    <td>
+                                        <select class="js_select2Fakturabel" style="width:100%">
+                                        <optgroup label="Vælg venligst">
+                                            <option value="ja">Ja</option>
+                                            <option value="null">-</option>
+                                            <option value="Nej">Nej</option>
+                                        </optgroup>
+                                    </select>
+                                    </td>
+                                    <td class="js_tableFaktureringOpgaveHide">
+                                        <div class="col-md-4 css_noPaddingLeftRight">
+                                            <div style="float:right; padding-right:5">
+                                                <b>kr.</b>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                            <input class="form-control">
+                                        </div>
+                                    </td>
+                                    <td class="js_tableBudgetOpgavePrisHide">
+                                        <div class="col-md-4 css_noPaddingLeftRight">
+                                            <div style="float:right; padding-right:5">
+                                                <b>kr.</b>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                            <input class="form-control">
+                                        </div>
+                                    </td>
+                                    <td class="js_tableBudgetOpgaveTimerHide">
+                                        <div class="col-md-2 css_noPaddingLeftRight">
+                                        </div>
+                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                            <input class="form-control">
+                                        </div>
+                                        <div class="col-md-2 css_noPaddingLeftRight">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                        Grafisk design
+                                    </td>
+                                    <td>
+                                        <select class="js_select2Fakturabel" style="width:100%">
+                                        <optgroup label="Vælg venligst">
+                                            <option value="ja">Ja</option>
+                                            <option value="null">-</option>
+                                            <option value="Nej">Nej</option>
+                                        </optgroup>
+                                    </select>
+                                    </td>
+                                    <td class="js_tableFaktureringOpgaveHide">
+                                        <div class="col-md-4 css_noPaddingLeftRight">
+                                            <div style="float:right; padding-right:5">
+                                                <b>kr.</b>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                            <input class="form-control">
+                                        </div>
+                                    </td>
+                                    <td class="js_tableBudgetOpgavePrisHide">
+                                        <div class="col-md-4 css_noPaddingLeftRight">
+                                            <div style="float:right; padding-right:5">
+                                                <b>kr.</b>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                            <input class="form-control">
+                                        </div>
+                                    </td>
+                                    <td class="js_tableBudgetOpgaveTimerHide">
+                                        <div class="col-md-2 css_noPaddingLeftRight">
+                                        </div>
+                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                            <input class="form-control">
+                                        </div>
+                                        <div class="col-md-2 css_noPaddingLeftRight">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                        Projektledelse
+
+                                    </td>
+                                    <td>
+                                        <select class="js_select2Fakturabel" style="width:100%">
+                                        <optgroup label="Vælg venligst">
+                                            <option value="ja">Ja</option>
+                                            <option value="null">-</option>
+                                            <option value="Nej">Nej</option>
+                                        </optgroup>
+                                    </select>
+                                    </td>
+                                    <td class="js_tableFaktureringOpgaveHide">
+                                        <div class="col-md-4 css_noPaddingLeftRight">
+                                            <div style="float:right; padding-right:5">
+                                                <b>kr.</b>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                            <input class="form-control">
+                                        </div>
+                                    </td>
+                                    <td class="js_tableBudgetOpgavePrisHide">
+                                        <div class="col-md-4 css_noPaddingLeftRight">
+                                            <div style="float:right; padding-right:5">
+                                                <b>kr.</b>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                            <input class="form-control">
+                                        </div>
+                                    </td>
+                                    <td class="js_tableBudgetOpgaveTimerHide">
+                                        <div class="col-md-2 css_noPaddingLeftRight">
+                                        </div>
+                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                            <input class="form-control">
+                                        </div>
+                                        <div class="col-md-2 css_noPaddingLeftRight">
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <input class="form-control" id="taskInput" type="text" placeholder="Tilføj opgave" />
+                    </div>
+
+
+                    <!-- 
                 <div class="row">
                     <div class="col-sm-12">
                         <select class="js_select2" multiple="multiple" style="width:100%">
@@ -432,160 +431,160 @@
                 </div>
                 -->
 
-                <!-- ASSIGNMENT PICKER END -->
+                    <!-- ASSIGNMENT PICKER END -->
 
 
-                <br>
-                <br>
+                    <br>
+                    <br>
 
-                <!-- WORKERS PICKER START -->
-                <div class="row">
-                    <div class="col-sm-12" class="form-control">
-                        <table class="table" id="employeeTable">
-                            <tr style="background-color: #F2F2F2">
-                                <th style="width: 30%">
-                                    Medarbejdere
-                                </th>
-                                <th style="text-align: center">
-                                    Projekt leder
-                                </th>
-                                <th style="text-align: center">
-                                    Team leder
-                                </th>
-                                <th style="text-align: center">
-                                    Fakturabel
-                                </th>
-                                <th style="width: 25%; text-align: center" class="js_tableFaktureringPersonHide">
-                                    Timepris
-                                </th>
-                                <th class="js_tableBudgetPersonTimerHide" style="text-align: center">
-                                    Budget(timer)
-                                </th>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
-                                    <span>Mohammed</span>
-                                </td>
-                                <td>
-                                    <div class="ui checkbox">
-                                        <input type="checkbox" name="example" value="">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="ui checkbox">
-                                        <input type="checkbox" name="example" value="">
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="ui checkbox">
-                                        <input type="checkbox" name="example" value="">
-                                    </div>
-                                </td>
-                                <td class="js_tableFaktureringPersonHide" style="width: 20%">
-                                    <div class="col-md-4 css_noPaddingLeftRight">
-                                        <div style="float:right; padding-right:5">
-                                            <b>kr.</b>
+                    <!-- WORKERS PICKER START -->
+                    <div class="row">
+                        <div class="col-md-12" class="form-control">
+                            <table class="table" id="employeeTable">
+                                <tr style="background-color: #F2F2F2">
+                                    <th style="width: 30%">
+                                        Medarbejdere
+                                    </th>
+                                    <th style="text-align: center">
+                                        Projekt leder
+                                    </th>
+                                    <th style="text-align: center">
+                                        Team leder
+                                    </th>
+                                    <th style="text-align: center">
+                                        Fakturabel
+                                    </th>
+                                    <th style="width: 25%; text-align: center" class="js_tableFaktureringPersonHide">
+                                        Timepris
+                                    </th>
+                                    <th class="js_tableBudgetPersonTimerHide" style="text-align: center">
+                                        Budget(timer)
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                        <span>Mohammed</span>
+                                    </td>
+                                    <td>
+                                        <div class="ui checkbox">
+                                            <input type="checkbox" name="example" value="">
                                         </div>
-                                    </div>
-                                    <div class="col-md-8 css_noPaddingLeftRight">
-                                        <input class="form-control">
-                                    </div>
-                                </td>
-                                <td class="js_tableBudgetPersonTimerHide">
-                                    <div class="col-md-2 css_noPaddingLeftRight">
-                                    </div>
-                                    <div class="col-md-8 css_noPaddingLeftRight">
-                                        <input class="form-control">
-                                    </div>
-                                    <div class="col-md-2 css_noPaddingLeftRight">
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
+                                    </td>
+                                    <td>
+                                        <div class="ui checkbox">
+                                            <input type="checkbox" name="example" value="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="ui checkbox">
+                                            <input type="checkbox" name="example" value="">
+                                        </div>
+                                    </td>
+                                    <td class="js_tableFaktureringPersonHide" style="width: 20%">
+                                        <div class="col-md-4 css_noPaddingLeftRight">
+                                            <div style="float:right; padding-right:5">
+                                                <b>kr.</b>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                            <input class="form-control">
+                                        </div>
+                                    </td>
+                                    <td class="js_tableBudgetPersonTimerHide">
+                                        <div class="col-md-2 css_noPaddingLeftRight">
+                                        </div>
+                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                            <input class="form-control">
+                                        </div>
+                                        <div class="col-md-2 css_noPaddingLeftRight">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
 
+                        </div>
                     </div>
-                </div>
 
-                <div>
-                    <input class="js_Select2 form-control" id="employeeInput" type="text" list="employees" placeholder="Tilføj medarbejder" />
-                    <datalist id="employees">
-                        <option value="Philip" />
-                        <option value="Casper" />
-                        <option value="Mathias" />
-                        <option value="Jens" />
-                </div>
-                <!-- WORKERS PICKER END -->
-
-                <br>
-                <br>
-
-                <!-- LABEL PICKER START -->
-
-                <div class="row">
-                    <div class="col-sm-12" class="form-control">
-                        <table id="labelTable" class="table">
-                            <tr style="background-color: #F2F2F2">
-                                <th style="width: 95%">
-                                    Labels
-                                </th>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
-                                    <span>Fase 1</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
-                                    <span>Frontend</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
-                                    <span>Fase 2</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
-                                    <span>Backend</span>
-                                </td>
-                            </tr>
-                        </table>
-
+                    <div>
+                        <input class="js_Select2 form-control" id="employeeInput" type="text" list="employees" placeholder="Tilføj medarbejder" />
+                        <datalist id="employees">
+                            <option value="Philip" />
+                            <option value="Casper" />
+                            <option value="Mathias" />
+                            <option value="Jens" />
                     </div>
-                </div>
+                    <!-- WORKERS PICKER END -->
 
-                <div>
-                    <input class="form-control" id="labelInput" type="text" placeholder="Tilføj label" />
-                </div>
-                <!-- LABEL PICKER END -->
+                    <br>
+                    <br>
 
-                <br>
-                <br>
+                    <!-- LABEL PICKER START -->
 
-                <!-- START LIST OF TEMPLATES -->
-                <div class="row">
-                    <div class="col-sm-12" class="form-control">
-                        <table class="table">
-                            <tr style="background-color: #F2F2F2">
-                                <th>
-                                    Templates
-                                </th>
-                                <th>
-                                    Medarbejdere
-                                </th>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
-                                    <span>Scrum</span>
-                                </td>
-                                <td>
-                                    <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                    <div class="row">
+                        <div class="col-sm-12" class="form-control">
+                            <table id="labelTable" class="table">
+                                <tr style="background-color: #F2F2F2">
+                                    <th style="width: 95%">
+                                        Labels
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                        <span>Fase 1</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                        <span>Frontend</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                        <span>Fase 2</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                        <span>Backend</span>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <input class="form-control" id="labelInput" type="text" placeholder="Tilføj label" />
+                    </div>
+                    <!-- LABEL PICKER END -->
+
+                    <br>
+                    <br>
+
+                    <!-- START LIST OF TEMPLATES -->
+                    <div class="row">
+                        <div class="col-sm-12" class="form-control">
+                            <table class="table">
+                                <tr style="background-color: #F2F2F2">
+                                    <th>
+                                        Templates
+                                    </th>
+                                    <th>
+                                        Medarbejdere
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                        <span>Scrum</span>
+                                    </td>
+                                    <td>
+                                        <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
                                         <optgroup label="Medarbejdere">
                                             <option value="Je">Jens 👤</option>
                                             <option value="Ma">Maria 👤</option>
@@ -598,15 +597,15 @@
                                             <option value="Mat">Mathias 👤</option> 
                                         </optgroup>
                                     </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
-                                    <span>Frontend</span>
-                                </td>
-                                <td>
-                                    <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                        <span>Frontend</span>
+                                    </td>
+                                    <td>
+                                        <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
                                         <optgroup label="Medarbejdere">
                                             <option value="Je">Jens 👤</option>
                                             <option value="Ma">Maria 👤</option>
@@ -619,15 +618,15 @@
                                             <option value="Mo">Mohammed 👤</option> 
                                         </optgroup>
                                     </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
-                                    <span>Backend</span>
-                                </td>
-                                <td>
-                                    <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left">
+                                        <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                        <span>Backend</span>
+                                    </td>
+                                    <td>
+                                        <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
                                         <optgroup label="Medarbejdere">
                                             <option value="Je">Jens 👤</option>
                                             <option value="Ma">Maria 👤</option>
@@ -640,65 +639,65 @@
                                             <option value="Mo">Mohammed 👤</option> 
                                         </optgroup>
                                     </select>
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
 
-                        </table>
+                            </table>
 
-                    </div>
-                </div>
-                <!-- END LIST OF TEMPLATES -->
-
-                <hr>
-                <br>
-
-                <!-- START OPRET TEMPLATE BUTTON & GEM OG ANNULER KNAP -->
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div>
-                            <button class="btn btn-success">Gem projekt</button>
-                            <button class="btn btn-primary" data-parent="#templateParent" data-toggle="collapse" href="#templateCollapse" id="opretTemplate">Opret template</button>
-                            <button class="btn btn-default">Annuler</button>
-                            <br><br><br>
                         </div>
                     </div>
-                </div>
+                    <!-- END LIST OF TEMPLATES -->
 
-                <!-- START TEMPLATE FORM -->
-                <div id="templateCollapse" class="collapse">
-                    <form>
+                    <hr>
+                    <br>
 
-                        <!-- START Tidsregistrering TITEL -->
-                        <br>
-                        <!-- END Tidsregistrering TITEL -->
+                    <!-- START OPRET TEMPLATE BUTTON & GEM OG ANNULER KNAP -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div>
+                                <button class="btn btn-success">Gem projekt</button>
+                                <button class="btn btn-primary" data-parent="#templateParent" data-toggle="collapse" href="#templateCollapse" id="opretTemplate">Opret template</button>
+                                <button class="btn btn-default">Annuler</button>
+                                <br><br><br>
+                            </div>
+                        </div>
+                    </div>
 
-                        <!-- START FIRMA/PROJEKT -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Firma</label>
-                                <select class="js_select2" style="width:100%">
+                    <!-- START TEMPLATE FORM -->
+                    <div id="templateCollapse" class="collapse">
+                        <form>
+
+                            <!-- START Tidsregistrering TITEL -->
+                            <br>
+                            <!-- END Tidsregistrering TITEL -->
+
+                            <!-- START FIRMA/PROJEKT -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Firma</label>
+                                    <select class="js_select2" style="width:100%">
                                 <option value="I">IKEA</option>
                                 <option value="M">Mash</option>
                             </select>
-                            </div>
-                            <div class="col-md-6">
-                                <label>Projekt</label>
-                                <select class="js_select2" style="width:100%">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Projekt</label>
+                                    <select class="js_select2" style="width:100%">
                                 <option value="AL">Hjemmeside</option>
                                 <option value="WY">App</option>
                             </select>
+                                </div>
                             </div>
-                        </div>
-                        <!-- END FIRMA/PROJEKT -->
+                            <!-- END FIRMA/PROJEKT -->
 
-                        <br>
+                            <br>
 
-                        <!-- START LABELS/MEDARBEJDERE -->
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Labels</label>
-                                <br>
-                                <select class="js_select2" multiple="multiple" style="width:100%">
+                            <!-- START LABELS/MEDARBEJDERE -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Labels</label>
+                                    <br>
+                                    <select class="js_select2" multiple="multiple" style="width:100%">
                                 <optgroup label="Seneste">
                                     <option value="R">#Frontend </option>
                                     <option value="C">#SEO</option>
@@ -710,12 +709,12 @@
                                     <option value="S">#Hjemmeside</option>
                                 </optgroup>
                             </select>
-                            </div>
+                                </div>
 
-                            <div class="col-md-6">
-                                <label>Medarbejdere</label>
-                                <br>
-                                <select class="js_select2" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                <div class="col-md-6">
+                                    <label>Medarbejdere</label>
+                                    <br>
+                                    <select class="js_select2" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
                                 <optgroup label="Seneste">
                                     <option value="C">Mikkel 👤</option>
                                     <option value="P">Peter 👤</option>
@@ -726,50 +725,50 @@
                                     <option value="S">Lone 👤</option> 
                                 </optgroup>
                             </select>
-                            </div>
-                        </div>
-                        <!-- END LABELS/MEDARBEJDERE -->
-
-                        <!-- START FOOTER TEMPLATE -->
-                        <div class="row" style="padding: 10px">
-                            <div class="col-md-6">
-                                <div class="css_padding5px">
-                                    <input style="float: left" type="checkbox" checked data-toggle="toggle" data-on="Fakturerbar" data-off="Ikke fakturerbar"
-                                        data-onstyle="success" data-offstyle="danger" data-width="100%">
                                 </div>
                             </div>
+                            <!-- END LABELS/MEDARBEJDERE -->
 
-                            <div class="col-md-6">
-                                <div class="col-md-6 css_removePadding">
+                            <!-- START FOOTER TEMPLATE -->
+                            <div class="row" style="padding: 10px">
+                                <div class="col-md-6">
                                     <div class="css_padding5px">
-                                        <button class="btn btn-primary" data-dismiss="collapse" style="width:100%">Gem template</button>
+                                        <input style="float: left" type="checkbox" checked data-toggle="toggle" data-on="Fakturerbar" data-off="Ikke fakturerbar"
+                                            data-onstyle="success" data-offstyle="danger" data-width="100%">
                                     </div>
                                 </div>
-                                <div class="col-md-6 css_removePadding">
-                                    <div class="css_padding5px">
-                                        <button class="btn btn-default" data-dismiss="collapse" style="width:100%">Luk</button>
+
+                                <div class="col-md-6">
+                                    <div class="col-md-6 css_removePadding">
+                                        <div class="css_padding5px">
+                                            <button class="btn btn-primary" data-dismiss="collapse" style="width:100%">Gem template</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 css_removePadding">
+                                        <div class="css_padding5px">
+                                            <button class="btn btn-default" data-dismiss="collapse" style="width:100%">Luk</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- END FOOTER TEMPLATE -->
-                    </form>
-                    <br>
-                    <!-- END TEMPLATE FORM -->
+                            <!-- END FOOTER TEMPLATE -->
+                        </form>
+                        <br>
+                        <!-- END TEMPLATE FORM -->
+                    </div>
+                    <!-- END OPRET TEMPLATE & GEM OG ANNULER KNAP -->
+                    </div>
+                    <!-- END COL-MD-6 -->
+
+                    <div class="col-md-3">
+                    </div>
+
                 </div>
-                <!-- END OPRET TEMPLATE & GEM OG ANNULER KNAP -->
+                <!-- END ROW -->
             </div>
-            <!-- END COL-MD-6 -->
+            <!-- END CONTAINER -->
 
-            <div class="col-md-3">
-            </div>
-
-        </div>
-        <!-- END ROW -->
-    </div>
-    <!-- END CONTAINER -->
- 
-    <script src="script.js"></script>
+            <script src="script.js"></script>
 </body>
 
 </html>

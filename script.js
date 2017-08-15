@@ -37,6 +37,12 @@ $(document).ready(function () {
                 )
             $(this).val('');
         }
+
+        $('.table tr button').click(function () {
+            $(this).parent().parent().remove();
+            return false;
+        });
+
     });
 
     //TO ADD A NEW EMPLOYEE IN EMPLOYEE TABLE
@@ -84,6 +90,12 @@ $(document).ready(function () {
                 )
             $(this).val('');
         }
+
+        $('.table tr button').click(function () {
+            $(this).parent().parent().remove();
+            return false;
+        });
+
     });
 
     //TO ADD A NEW TASK IN TASK TABLE
@@ -119,7 +131,11 @@ $(document).ready(function () {
         }
 
     });
-
+    
+    $('.table tr button').click(function () {
+        $(this).parent().parent().remove();
+        return false;
+    });
 
 });
 

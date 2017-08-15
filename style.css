@@ -28,6 +28,24 @@
     padding-bottom: 20px;
 }
 
+.css_noPaddingTopBottom {
+    padding-top:0; padding-bottom:0;
+}
+
+.css_noPaddingLeftRight {
+        padding-left:0; padding-right:0;
+}
+ 
+/* Default hidden billing options */
+.js_taskHide {
+     display: none;
+}
+.js_personHide {
+     display: none;
+}
+.js_projectHide {
+     display: none;
+}
 .css_removePadding {
     padding: 0;
 }
@@ -59,3 +77,11 @@
  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
     background-color: #1773C3;
  }
+
+ hr {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #BBBBBB; /* old IE */
+    background-color: #BBBBBB; /* Modern Browsers */
+}

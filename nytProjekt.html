@@ -59,20 +59,34 @@
                 </div>
 
                 <!-- New Project START -->
-                <div>
-                    <form>
-                        <label>Firma navn</label><input class="form-control" type="text" name="businessName">
-                        <br>
-                        <label>Projekt navn</label><input class="form-control" type="text" name="projectName">
-                        <br>
-                        <label>Start dato</label><input class="form-control" type="date" name="date" id="dateofbirth" />
-                        <br>
-                        <label>Note</label><textarea class="form-control" placeholder="Valgfrit"></textarea>
-                    </form>
-                    <hr>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class='table removeBordersTable'>
+                            <tr>
+                                <td class="col-sm-2" style="text-align: left"><label>Firma</label></td>
+                                <td class="col-sm-8"><input class="form-control" style="padding: 0px" type="text" name="businessName"></td>
+                                <td class="col-sm-2"><button class="btn btn-default centerButton"><span class="glyphicon glyphicon-plus"></span> Tilføj firma</button></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-2" style="text-align: left"><label>Projekt navn</label></td>
+                                <td class="col-sm-10"><input class="form-control" type="text" name="businessName"></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-2" style="text-align: left"><label></a> Start dato </label>
+                                    <a style="float: right" class="glyphicon glyphicon-info-sign" data-toggle="tooltip" title="Valgfri, men anbefales. Hvis startdato ikke vælges, bliver den automatisk sat til dato ved første tidsregistrering."></td>
+                                <td class="col-sm-10"><input class="form-control" type="date" name="date" id="dateofbirth" /></td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-2" style="text-align: left"><label>Note </label><a style="float: right" class="glyphicon glyphicon-info-sign" data-toggle="tooltip"
+                                        title="Valgfri, men anbefales. Tilføj note."></a> </td>
+                                <td class="col-sm-10"><textarea class="form-control" type="text" name="businessName"></textarea>
+                                    <p style="font-style: italic">Noter kan kun ses af administrator</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
                 <!-- New Project END -->
-
 
                 <!-- START PROJECT TYPE -->
                 <div class="row">
@@ -101,18 +115,32 @@
 
                             <!-- START TIDER & MATERIALER COLLAPSE -->
                             <div id="collapse1" class="panel-collapse collapse in">
-                                <div class="css_divPadding-top">
-                                    <h4><strong>Faktureringsmetode</strong></h4>
-                                    <select class="js_select2" style="width:100%">
+                                <h4><strong>Faktureringsmetode</strong></h4>
+                                <div class="row">
+
+                                    <div class="col-md-8">
+                                        <select class="form-control css_noPaddingTopBottom" id="js_Select">
                                             <option value="">Ingen faktureringsmetode valgt</option>
-                                            <option value="P">Projekt timepris</option>
-                                            <option value="I">Person timepris</option>
-                                            <option value="M">Opgave timepris</option>
+                                            <option value="Project">Projekt timepris</option>
+                                            <option value="Person">Person timepris</option>
+                                            <option value="Task">Opgave timepris</option>
                                         </select>
+                                    </div>
+                                    <div class="col-md-4 js_projectHide">
+                                        <div class="col-md-4 css_noPaddingLeftRight">
+                                            <div style="float:right; padding-right:5; font-size: 16px;">
+                                                <b>kr.</b>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 css_noPaddingLeftRight">
+                                            <input class="form-control">
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <div class="css_divPadding-top">
                                     <h4><strong>Budget</strong></h4>
-                                    <select class="js_select2" style="width:100%">
+                                    <select class="form-control css_noPaddingTopBottom">
                                             <option value="I">Ingen faktureringsmetode valgt</option>
                                             <option value="M">Samlet projekttimer</option>
                                             <option value="">Samlet projektudgifter</option>
@@ -181,11 +209,15 @@
                     <div class="col-sm-12">
                         <table class="table">
                             <tr style="background-color: #F2F2F2">
-                                <th style="width: 95%">
+                                <th style="width: 65%">
                                     Opgaver
                                 </th>
-                                <th>
+                                <th style="text-align: center">
                                     Fakturabel
+                                </th>
+
+                                <th class="js_taskHide" style="text-align: center">
+                                    Timepris
                                 </th>
                             </tr>
                             <tr>
@@ -195,6 +227,16 @@
                                 <td>
                                     <div class="checkbox">
                                         <label><input type="checkbox" value=""></label>
+                                    </div>
+                                </td>
+                                <td class="js_taskHide">
+                                    <div class="col-md-4 css_noPaddingLeftRight">
+                                        <div style="float:right; padding-right:5">
+                                            <b>kr.</b>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 css_noPaddingLeftRight">
+                                        <input class="form-control">
                                     </div>
                                 </td>
                             </tr>
@@ -207,6 +249,16 @@
                                         <label><input type="checkbox" value=""></label>
                                     </div>
                                 </td>
+                                <td class="js_taskHide">
+                                    <div class="col-md-4 css_noPaddingLeftRight">
+                                        <div style="float:right; padding-right:5">
+                                            <b>kr.</b>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 css_noPaddingLeftRight">
+                                        <input class="form-control">
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td style="text-align: left">
@@ -216,6 +268,16 @@
                                 <td>
                                     <div class="checkbox">
                                         <label><input type="checkbox" value=""></label>
+                                    </div>
+                                </td>
+                                <td class="js_taskHide">
+                                    <div class="col-md-4 css_noPaddingLeftRight">
+                                        <div style="float:right; padding-right:5">
+                                            <b>kr.</b>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 css_noPaddingLeftRight">
+                                        <input class="form-control">
                                     </div>
                                 </td>
                             </tr>
@@ -250,7 +312,7 @@
 
                 <div class="row">
                     <div class="col-sm-12" class="form-control">
-                        <table class="table">
+                        <table id="myTable" class="table">
                             <tr style="background-color: #F2F2F2">
                                 <th style="width: 95%">
                                     Labels
@@ -271,6 +333,10 @@
                     </div>
                 </div>
 
+                <div class="dropdown">
+                    <input type="text" class="dropdown-toggle" data-toggle="dropdown" />
+                </div>
+                <!--
                 <div class="row">
                     <div class="col-sm-12">
                         <select class="js_select2" multiple="multiple" style="width:100%">
@@ -287,6 +353,7 @@
                 </select>
                     </div>
                 </div>
+                -->
 
                 <!-- LABEL PICKER END -->
 
@@ -299,17 +366,20 @@
                     <div class="col-sm-12" class="form-control">
                         <table class="table">
                             <tr style="background-color: #F2F2F2">
-                                <th style="width: 67%">
-                                    Tilknyttede medarbejdere
+                                <th style="width: 30%">
+                                    Medarbejdere
                                 </th>
-                                <th>
-                                    Projet leder
+                                <th style="text-align: center">
+                                    Projekt leder
                                 </th>
-                                <th>
+                                <th style="text-align: center">
                                     Team leder
                                 </th>
-                                <th>
+                                <th style="text-align: center">
                                     Fakturabel
+                                </th>
+                                <th style="width: 25%; text-align: center" class="js_personHide">
+                                    Timepris
                                 </th>
                             </tr>
                             <tr>
@@ -324,6 +394,16 @@
                                 </td>
                                 <td>
                                     <label><input type="checkbox" value=""></label>
+                                </td>
+                                <td class="js_personHide" style="width: 20%">
+                                    <div class="col-md-4 css_noPaddingLeftRight">
+                                        <div style="float:right; padding-right:5">
+                                            <b>kr.</b>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 css_noPaddingLeftRight">
+                                        <input class="form-control">
+                                    </div>
                                 </td>
                             </tr>
                         </table>

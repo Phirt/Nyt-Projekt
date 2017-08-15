@@ -51,9 +51,12 @@
                                 )
                                 .append($(this).val())
                             )
-
+                            .append($('<td>')
+                                        .append($('<div class="checkbox">')
+                                        )
+                            )
                         )
-                    $(this).val('');
+                    $(this).val('')
                 }
 
             });

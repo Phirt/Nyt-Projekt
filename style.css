@@ -85,6 +85,7 @@ table th {
     background-color: #1773C3;
  }
 
+ /* CHANGE COLOR OF HR */
  hr {
     border: none;
     height: 1px;
@@ -92,3 +93,19 @@ table th {
     color: #BBBBBB; /* old IE */
     background-color: #BBBBBB; /* Modern Browsers */
 }
+<<<<<<< HEAD
+=======
+
+ /* REMOVE BORDERS ON TABLE */
+.table.removeBordersTable tr td, .table.removeBordersTable tr th {
+    border-width: 0;
+}
+
+footer {
+    padding: 1em;
+    color: white;
+    background-color: #5A93C4;
+    clear: left;
+    text-align: center;
+}
+>>>>>>> e8d303e9240ebdfbf4c3401ae43770fe135f52a1

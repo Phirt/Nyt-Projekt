@@ -21,10 +21,10 @@ $(document).ready(function () {
         return false;
     });
 
-    //TO ADD A NEW LABEL
-    $('input').on('keypress', function (e) {
+    //TO ADD A NEW LABEL IN LABEL TABLE
+    $('#labelInput').on('keypress', function (e) {
         if (e.keyCode == 13) {
-            $("#myTable")
+            $("#labelTable")
                 .append($('<tr>')
                     .append($('<td>')
                         .css('text-align', 'left')
@@ -37,16 +37,88 @@ $(document).ready(function () {
                 )
             $(this).val('');
         }
-
-        //TO REMOVE A ROW IN A TABLE
-        $('.table tr button i').click(function () {
-            $(this).parent().parent().remove();
-            return false;
-        });
-
     });
 
+    //TO ADD A NEW EMPLOYEE IN EMPLOYEE TABLE
+    $('#employeeInput').on('keypress', function (e) {
+        if (e.keyCode == 13) {
+            $("#employeeTable")
+                .append($('<tr>')
+                    .append($('<td>')
+                        .css('text-align', 'left')
+                        .append($('<button type="button" class="btn btn-default btn-circle">')
+                            .append($('<i class="glyphicon glyphicon-remove">'))
+                        )
+                        .append(' ' + $(this).val())
+                    )
+                    .append($('<td>')
+                        .append($('<div class="checkbox">')
+                            .append($('<label><input type="checkbox" value=""></label>')
+                            )
+                        )
+                    )
+                    .append($('<td>')
+                        .append($('<div class="checkbox">')
+                            .append($('<label><input type="checkbox" value=""></label>')
+                            )
+                        )
+                    )
+                    .append($('<td>')
+                        .append($('<div class="checkbox">')
+                            .append($('<label><input type="checkbox" value=""></label>')
+                            )
+                        )
+                    )
+                    .append($('<td class="js_personHide" style="width: 20%">')
+                        .append($('<div class="col-md-4 css_noPaddingLeftRight">')
+                            .append($('<div style="float:right; padding-right:5">')
+                                .append($('<b>kr.</b>'))
+                            )
+                        )
+                        .append($('<div class="col-md-8 css_noPaddingLeftRight">')
+                            .append($('<input class="form-control">'))
+                        )
+                    )
 
+
+                )
+            $(this).val('');
+        }
+    });
+
+    //TO ADD A NEW TASK IN TASK TABLE
+    $('#taskInput').on('keypress', function (e) {
+        if (e.keyCode == 13) {
+            $("#taskTable")
+                .append($('<tr>')
+                    .append($('<td>')
+                        .css('text-align', 'left')
+                        .append($('<button type="button" class="btn btn-default btn-circle">')
+                            .append($('<i class="glyphicon glyphicon-remove">'))
+                        )
+                        .append(' ' + $(this).val())
+                    )
+                    .append($('<td>')
+                        .append($('<div class="checkbox">')
+                            .append($('<label><input type="checkbox" value=""></label>')
+                            )
+                        )
+                    )
+                    .append($('<td class="js_taskHide">')
+                        .append($('<div class="col-md-4 css_noPaddingLeftRight">')
+                            .append($('<div style="float:right; padding-right:5">')
+                                .append($('<b>kr.</b>'))
+                            )
+                        )
+                        .append($('<div class="col-md-8 css_noPaddingLeftRight">')
+                            .append($('<input class="form-control">'))
+                        )
+                    )
+                )
+            $(this).val('');
+        }
+
+    });
 
 
 });
@@ -77,6 +149,15 @@ $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
 
+
+$("#opretTemplate").on("click", function () {
+    $('#templateCollapse').on('shown.bs.collapse', function () {
+        $('html, body').animate({
+            scrollTop: $("footer").offset().top
+        }, 1);
+    })
+
+});
 
 // SELECT2 AND SEMANTIC UI
 $(document).ready(function () {

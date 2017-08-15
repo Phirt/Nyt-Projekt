@@ -532,55 +532,9 @@
                 <hr>
                 <br>
 
-                <!-- START LAV NY TEMPLATE BUTTON -->
+                <!-- START OPRET TEMPLATE BUTTON & GEM OG ANNULER KNAP -->
                 <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#NyTemplateCollapse">Lav ny template</button>
-                    </div>
-                </div>
-                <!-- END LAV NY TEMPLATE BUTTON -->
-
-                <hr>
-                <br>
-
-            </div>
-            <!-- END COL-MD-6 -->
-
-
-
-            <div class="col-md-3">
-            </div>
-
-        </div>
-        <!-- END ROW -->
-    </div>
-    <!-- END CONTAINER -->
-
-    <!-- LINK TO SCRIPT.JS -->
-
-
-</body>
-
-</html>
-
-
-<!-- START TEMPLATE FORM -->
-<div id="NyTemplateCollapse" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Ny Template</h4>
-            </div>
-            <div class="modal-body">
-                <!-- START FORM TAG -->
-                <form>
-
-                    <!-- START EKSISTERENDE TEMPLATE -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h5>Brug eksisterende templates</h5>
-                        </div>
+                    <div class="col-sm-12">
                         <div>
                             <button class="btn btn-success">Gem projekt</button>
                             <button class="btn btn-primary" data-parent="#templateParent" data-toggle="collapse" href="#templateCollapse" id="opretTemplate">Opret template</button>
@@ -599,7 +553,7 @@
                         <!-- END Tidsregistrering TITEL -->
 
                         <!-- START FIRMA/PROJEKT -->
-                        <div class="row" >
+                        <div class="row">
                             <div class="col-md-6">
                                 <label>Firma</label>
                                 <select class="js_select2" style="width:100%">
@@ -679,46 +633,46 @@
                             </div>
                         </div>
                         <!-- END FOOTER TEMPLATE -->
-
                     </form>
+                    <br>
                     <!-- END TEMPLATE FORM -->
                 </div>
+                <!-- END OPRET TEMPLATE & GEM OG ANNULER KNAP -->
             </div>
-            <!-- END OPRET TEMPLATE & GEM OG ANNULER KNAP -->
+            <!-- END COL-MD-6 -->
 
-            <br>
+            <div class="col-md-3">
+            </div>
 
         </div>
-        <!-- END COL-MD-6 -->
-
-        <div class="col-md-3">
-        </div>
-
-
-    </div>
-    <!-- END ROW -->
+        <!-- END ROW -->
     </div>
     <!-- END CONTAINER -->
 
-    <!-- START FOOTER -->
-    <footer>Alpha Solutions A/S</footer>
-    <!-- END FOOTER -->
+</body>
 
-    <!-- LINK TO SCRIPT.JS -->
-    <script src="script.js"></script>
+</html>
 
-    <!-- SCRIPTS START -->
+<!-- START FOOTER -->
+<footer>Alpha Solutions A/S</footer>
+<!-- END FOOTER -->
 
-    <!-- SELECT2, USED FOR DROPDOWN MENU -->
+<!-- LINK TO SCRIPT.JS -->
+<script src="script.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $(".js_select2").select2();
-            $(".modal .js_select2").select2();
-        });
-    </script>
+<!-- SCRIPTS START -->
 
-    <!-- SCRIPTS END -->
+<!-- SELECT2, USED FOR DROPDOWN MENU -->
+
+<script>
+    $(document).ready(function () {
+        $(".js_select2").select2();
+        $(".modal .js_select2").select2();
+    });
+
+</script>
+
+<!-- SCRIPTS END -->
 </body>
 
 </html>

@@ -58,20 +58,20 @@ $(document).ready(function () {
                         .append(' ' + $(this).val())
                     )
                     .append($('<td>')
-                        .append($('<div class="checkbox">')
-                            .append($('<label><input type="checkbox" value=""></label>')
+                        .append($('<div class="ui checkbox">')
+                            .append($('<input type="checkbox" name="example" value="">')
                             )
                         )
                     )
                     .append($('<td>')
-                        .append($('<div class="checkbox">')
-                            .append($('<label><input type="checkbox" value=""></label>')
+                        .append($('<div class="ui checkbox">')
+                            .append($('<input type="checkbox" name="example" value="">')
                             )
                         )
                     )
                     .append($('<td>')
-                        .append($('<div class="checkbox">')
-                            .append($('<label><input type="checkbox" value=""></label>')
+                        .append($('<div class="ui checkbox">')
+                            .append($('<input type="checkbox" name="example" value="">')
                             )
                         )
                     )
@@ -93,13 +93,17 @@ $(document).ready(function () {
                 $(this).parent().parent().remove();
                 return false;
             });
+
+            // TILFØJ SEMANTIC UI PÅ CHECKBOXES 
+            $('.ui.checkbox').checkbox();
+
         }
 
 
     });
 
     //TO ADD A NEW TASK IN TASK TABLE
-    $('#taskInput').on('keydown', function (e) {
+    $('#taskInput').on('keypress', function (e) {
         if (e.keyCode == 13) {
             $("#taskTable")
                 .append($('<tr>')
@@ -111,8 +115,11 @@ $(document).ready(function () {
                         .append(' ' + $(this).val())
                     )
                     .append($('<td>')
-                        .append($('<div class="checkbox">')
-                            .append($('<label><input type="checkbox" value=""></label>')
+                        .append($('<select class="js_select2Fakturabel" style="width:100%">')
+                            .append($('<optgroup label="Vælg venligst">')
+                                .append($('<option value="ja">Ja</option>'))
+                                .append($('<option value="null">-</option>'))
+                                .append($('<option value="nej">Nej</option>'))
                             )
                         )
                     )
@@ -128,16 +135,22 @@ $(document).ready(function () {
                     )
                 )
             $(this).val('');
+
+            // SÅ MAN KAN FJERNE ROW
             $('.table tr button').click(function () {
                 $(this).parent().parent().remove();
                 return false;
             });
+
+            // FOR AT TILFØJE SELECT2 TIL DEN NYE ROW
+            $(".js_select2Fakturabel").select2({
+                minimumResultsForSearch: -1
+            });
+
         }
 
-        return false;
 
     });
-
 
 });
 
@@ -200,7 +213,7 @@ $(document).ready(function () {
         minimumResultsForSearch: -1
     });
 
-    
+
 
     $(".modal .js_select2").select2();
 

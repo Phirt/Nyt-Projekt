@@ -165,20 +165,6 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
-<<<<<<< HEAD
-    $("#opretTemplate").on("click", function () {
-        $('#templateCollapse').on('shown.bs.collapse', function () {
-            $('html, body').animate({
-                scrollTop: $("footer").offset().top
-            }, 1);
-        })
-
-    });
-});
-
-
-
-=======
 
     $("#opretTemplate").on("click", function () {
         $('#templateCollapse').on('shown.bs.collapse', function () {
@@ -189,7 +175,6 @@ $(document).ready(function () {
 
     });
 });
->>>>>>> 47e1768dcbd24ccd9a581b87eae6b80b57a15223
 
 
 

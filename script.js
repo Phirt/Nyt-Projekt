@@ -148,3 +148,39 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
+
+
+$("#opretTemplate").on("click", function () {
+    $('#templateCollapse').on('shown.bs.collapse', function () {
+        $('html, body').animate({
+            scrollTop: $("footer").offset().top
+        }, 1);
+    })
+
+});
+
+// SELECT2 AND SEMANTIC UI
+$(document).ready(function () {
+
+    // SELECT2 STUFF
+    $(".js_select2").select2({
+        placeholder: {
+            id: '-1', // the value of the option
+            text: 'Opret'
+        }
+    });
+
+    $(".js_select2Templates").select2({
+        placeholder: {
+            id: '-1', // the value of the option
+            text: 'Tilføj medarbejder'
+        }
+    });
+
+    $(".modal .js_select2").select2();
+
+
+
+    // SEMANTIC UI STUFF
+    $('.ui.checkbox').checkbox();
+});

@@ -47,23 +47,50 @@ $(document).ready(function () {
     });
 });
 
-//Hide task, person and project
+//Hide task, person and project under Tid&Materialer > Faktureringsmetode
 
 $(document).ready(function () {
-    $("#js_Select").change(function (e) {
-        $(".js_taskHide").hide();
-        $(".js_personHide").hide();
-        $(".js_projectHide").hide();
+    $("#js_dropdownTidFaktureringSelect").change(function (e) {
+        $(".js_tableFaktureringOpgaveHide").hide();
+        $(".js_tableFaktureringPersonHide").hide();
+        $(".js_tableFaktureringProjectHide").hide();
 
-        if ($("#js_Select").val() === "Task") {
-            $(".js_taskHide").show();
+        if ($("#js_dropdownTidFaktureringSelect").val() === "Task") {
+            $(".js_tableFaktureringOpgaveHide").show();
         }
-        if ($("#js_Select").val() === "Person") {
-            $(".js_personHide").show();
+        if ($("#js_dropdownTidFaktureringSelect").val() === "Person") {
+            $(".js_tableFaktureringPersonHide").show();
         }
-        if ($("#js_Select").val() === "Project") {
-            $(".js_projectHide").show();
+        if ($("#js_dropdownTidFaktureringSelect").val() === "Project") {
+            $(".js_tableFaktureringProjectHide").show();
         }
+    });
+});
+
+$(document).ready(function () {
+    $("#js_dropdownTidBudgetSelect").change(function (e) {
+        $(".js_tableBudgetProjektTimerHide").hide();
+        $(".js_tableBudgetProjektPrisHide").hide();
+        $(".js_tableBudgetOpgaveTimerHide").hide();
+        $(".js_tableBudgetPersonTimerHide").hide();
+        $(".js_tableBudgetOpgavePrisHide").hide();
+
+        if ($("#js_dropdownTidBudgetSelect").val() === "ProjektTimer") {
+            $(".js_tableBudgetProjektTimerHide").show();
+        }
+        if ($("#js_dropdownTidBudgetSelect").val() === "ProjektPris") {
+            $(".js_tableBudgetProjektPrisHide").show();
+        }
+        if ($("#js_dropdownTidBudgetSelect").val() === "OpgaveTimer") {
+            $(".js_tableBudgetOpgaveTimerHide").show();
+        }
+        if ($("#js_dropdownTidBudgetSelect").val() === "PersonTimer") {
+            $(".js_tableBudgetPersonTimerHide").show();
+        }
+        if ($("#js_dropdownTidBudgetSelect").val() === "OpgavePris") {
+            $(".js_tableBudgetOpgavePrisHide").show();
+        }
+
     });
 });
 

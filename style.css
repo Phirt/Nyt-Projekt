@@ -36,16 +36,38 @@
         padding-left:0; padding-right:0;
 }
  
-/* Default hidden billing options */
-.js_taskHide {
+/* START Default hidden billing options*/
+
+/*Fakturering */
+.js_tableFaktureringOpgaveHide {
      display: none;
 }
-.js_personHide {
+.js_tableFaktureringPersonHide {
      display: none;
 }
-.js_projectHide {
+.js_tableFaktureringProjectHide {
      display: none;
 }
+
+/*Budget*/
+.js_tableBudgetProjektTimerHide{
+     display: none;
+}
+.js_tableBudgetProjektPrisHide {
+     display: none;
+}
+.js_tableBudgetOpgaveTimerHide {
+     display: none;
+}
+.js_tableBudgetPersonTimerHide {
+     display: none;
+}
+.js_tableBudgetOpgavePrisHide {
+     display: none;
+}
+/* END Default hidden billing options*/
+
+
 .css_removePadding {
     padding: 0;
 }
@@ -84,4 +106,14 @@
     /* Set the hr color */
     color: #BBBBBB; /* old IE */
     background-color: #BBBBBB; /* Modern Browsers */
+}
+
+.css_greyBackgroundExpand {
+  background-color: #f5f5f5;
+      border-radius: 5px;
+}
+
+.css_expandMarginPadding {
+  padding: 10px;
+  margin-top: 10px;
 }

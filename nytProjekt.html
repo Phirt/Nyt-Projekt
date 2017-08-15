@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./style.css">
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -14,10 +13,18 @@
     <!-- SELECT2 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+    <!-- SEMANTIC UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js"></script>
+
 </head>
 
 <body>
-
     <!-- START NAVBAR -->
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -211,7 +218,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <table class="table">
-                            <tr style="background-color: #F2F2F2">
+                            <tr>
                                 <th style="width: 65%">
                                     Opgaver
                                 </th>
@@ -390,13 +397,19 @@
                                     <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Mohammed
                                 </td>
                                 <td>
-                                    <label><input type="checkbox" value=""></label>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="example" value="">
+                                    </div>
                                 </td>
                                 <td>
-                                    <label><input type="checkbox" value=""></label>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="example" value="">
+                                    </div>
                                 </td>
                                 <td>
-                                    <label><input type="checkbox" value=""></label>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="example" value="">
+                                    </div>
                                 </td>
                                 <td class="js_personHide" style="width: 20%">
                                     <div class="col-md-4 css_noPaddingLeftRight">
@@ -433,11 +446,141 @@
                 <!-- WORKERS PICKER END -->
 
                 <br>
+
+                <!-- START LIST OF TEMPLATES -->
+                <div class="row">
+                    <div class="col-sm-12" class="form-control">
+                        <table class="table">
+                            <tr style="background-color: #F2F2F2">
+                                <th style="width: 30%">
+                                    Templates
+                                </th>
+                                <th style="text-align: center">
+                                    Medarbejdere
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                    <span>Scrum</span>
+                                </td>
+                                <td>
+                                    <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                        <optgroup label="Medarbejdere">
+                                            <option value="Je">Jens 👤</option>
+                                            <option value="Ma">Maria 👤</option>
+                                            <option value="Lo">Lone 👤</option> 
+                                            <option value="Tr">Trine 👤</option>
+                                            <option value="Al">Albert 👤</option>
+                                            <option value="Ol">Ole 👤</option> 
+                                            <option value="Ha">Hans 👤</option>
+                                            <option value="Ja">Jan 👤</option>
+                                            <option value="Mat">Mathias 👤</option> 
+                                        </optgroup>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                    <span>Frontend</span>
+                                </td>
+                                <td>
+                                    <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                        <optgroup label="Medarbejdere">
+                                            <option value="Je">Jens 👤</option>
+                                            <option value="Ma">Maria 👤</option>
+                                            <option value="Lo">Lone 👤</option> 
+                                            <option value="Tr">Trine 👤</option>
+                                            <option value="Al">Albert 👤</option>
+                                            <option value="Ol">Ole 👤</option> 
+                                            <option value="Ha">Hans 👤</option>
+                                            <option value="Ja">Jan 👤</option>
+                                            <option value="Mo">Mohammed 👤</option> 
+                                        </optgroup>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                    <span>Backend</span>
+                                </td>
+                                <td>
+                                    <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                        <optgroup label="Medarbejdere">
+                                            <option value="Je">Jens 👤</option>
+                                            <option value="Ma">Maria 👤</option>
+                                            <option value="Lo">Lone 👤</option> 
+                                            <option value="Tr">Trine 👤</option>
+                                            <option value="Al">Albert 👤</option>
+                                            <option value="Ol">Ole 👤</option> 
+                                            <option value="Ha">Hans 👤</option>
+                                            <option value="Ja">Jan 👤</option>
+                                            <option value="Mo">Mohammed 👤</option> 
+                                        </optgroup>
+                                    </select>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </div>
+                <!-- END LIST OF TEMPLATES -->
+
+                <hr>
                 <br>
 
-                <!-- START OPRET TEMPLATE BUTTON & GEM OG ANNULER KNAP -->
+                <!-- START LAV NY TEMPLATE BUTTON -->
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 text-center">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#NyTemplateCollapse">Lav ny template</button>
+                    </div>
+                </div>
+                <!-- END LAV NY TEMPLATE BUTTON -->
+
+                <hr>
+                <br>
+
+            </div>
+            <!-- END COL-MD-6 -->
+
+
+
+            <div class="col-md-3">
+            </div>
+
+        </div>
+        <!-- END ROW -->
+    </div>
+    <!-- END CONTAINER -->
+
+    <!-- LINK TO SCRIPT.JS -->
+
+
+</body>
+
+</html>
+
+
+<!-- START TEMPLATE FORM -->
+<div id="NyTemplateCollapse" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ny Template</h4>
+            </div>
+            <div class="modal-body">
+                <!-- START FORM TAG -->
+                <form>
+
+                    <!-- START EKSISTERENDE TEMPLATE -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5>Brug eksisterende templates</h5>
+                        </div>
                         <div>
                             <button class="btn btn-success">Gem projekt</button>
                             <button class="btn btn-primary" data-parent="#templateParent" data-toggle="collapse" href="#templateCollapse" id="opretTemplate">Opret template</button>

@@ -39,12 +39,16 @@ $(document).ready(function () {
         }
 
         //TO REMOVE A ROW IN A TABLE
-        $('.table tr button').click(function () {
+        $('.table tr button i').click(function () {
             $(this).parent().parent().remove();
             return false;
         });
 
     });
+
+
+
+
 });
 
 //Hide task, person and project
@@ -67,7 +71,8 @@ $(document).ready(function () {
     });
 });
 
-//Tooltip hover for the questionm   ark
+//Tooltip hover for the questionmark
+
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
@@ -82,3 +87,28 @@ $("#opretTemplate").on("click", function () {
 
 });
 
+// SELECT2 AND SEMANTIC UI
+$(document).ready(function () {
+
+    // SELECT2 STUFF
+    $(".js_select2").select2({
+        placeholder: {
+            id: '-1', // the value of the option
+            text: 'Opret'
+        }
+    });
+
+    $(".js_select2Templates").select2({
+        placeholder: {
+            id: '-1', // the value of the option
+            text: 'Tilføj medarbejder'
+        }
+    });
+
+    $(".modal .js_select2").select2();
+
+
+
+    // SEMANTIC UI STUFF
+    $('.ui.checkbox').checkbox();
+});

@@ -67,11 +67,8 @@ $(document).ready(function () {
     });
 });
 
-<<<<<<< HEAD
-=======
 //Tooltip hover for the questionmark
 
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
->>>>>>> origin/master

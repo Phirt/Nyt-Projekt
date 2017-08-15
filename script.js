@@ -101,7 +101,7 @@ $(document).ready(function () {
 
 
     });
-
+   
     //TO ADD A NEW TASK IN TASK TABLE
     $('#taskInput').on('keypress', function (e) {
         if (e.keyCode == 13) {
@@ -174,7 +174,7 @@ $(document).ready(function () {
     });
 });
 
-//Tooltip hover for the questionmark
+//Tooltip hover for the questionmark & Template
 
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();

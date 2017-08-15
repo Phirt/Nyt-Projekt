@@ -23,6 +23,7 @@ $(document).ready(function () {
 
     //TO ADD A NEW LABEL IN LABEL TABLE
     $('#labelInput').on('keypress', function (e) {
+        console.log("Hej med dig");
         if (e.keyCode == 13) {
             $("#labelTable")
                 .append($('<tr>')
@@ -36,12 +37,12 @@ $(document).ready(function () {
 
                 )
             $(this).val('');
+            $('.table tr button').click(function () {
+                $(this).parent().parent().remove();
+                return false;
+            });
         }
 
-        $('.table tr button').click(function () {
-            $(this).parent().parent().remove();
-            return false;
-        });
 
     });
 
@@ -89,17 +90,17 @@ $(document).ready(function () {
 
                 )
             $(this).val('');
+            $('.table tr button').click(function () {
+                $(this).parent().parent().remove();
+                return false;
+            });
         }
 
-        $('.table tr button').click(function () {
-            $(this).parent().parent().remove();
-            return false;
-        });
 
     });
 
     //TO ADD A NEW TASK IN TASK TABLE
-    $('#taskInput').on('keypress', function (e) {
+    $('#taskInput').on('keydown', function (e) {
         if (e.keyCode == 13) {
             $("#taskTable")
                 .append($('<tr>')
@@ -128,14 +129,16 @@ $(document).ready(function () {
                     )
                 )
             $(this).val('');
+            $('.table tr button').click(function () {
+                $(this).parent().parent().remove();
+                return false;
+            });
         }
 
-    });
-    
-    $('.table tr button').click(function () {
-        $(this).parent().parent().remove();
         return false;
+
     });
+
 
 });
 

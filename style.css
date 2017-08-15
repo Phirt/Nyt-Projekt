@@ -93,8 +93,6 @@ table th {
     color: #BBBBBB; /* old IE */
     background-color: #BBBBBB; /* Modern Browsers */
 }
-<<<<<<< HEAD
-=======
 
  /* REMOVE BORDERS ON TABLE */
 .table.removeBordersTable tr td, .table.removeBordersTable tr th {
@@ -108,4 +106,3 @@ footer {
     clear: left;
     text-align: center;
 }
->>>>>>> e8d303e9240ebdfbf4c3401ae43770fe135f52a1

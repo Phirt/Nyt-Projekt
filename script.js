@@ -23,7 +23,6 @@ $(document).ready(function () {
 
     //TO ADD A NEW LABEL IN LABEL TABLE
     $('#labelInput').on('keypress', function (e) {
-        console.log("Hej med dig");
         if (e.keyCode == 13) {
             $("#labelTable")
                 .append($('<tr>')

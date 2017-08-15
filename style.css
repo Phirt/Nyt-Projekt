@@ -77,3 +77,11 @@
  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
     background-color: #1773C3;
  }
+
+ hr {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #BBBBBB; /* old IE */
+    background-color: #BBBBBB; /* Modern Browsers */
+}

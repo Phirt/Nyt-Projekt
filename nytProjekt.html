@@ -6,18 +6,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./style.css">
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
     <!-- SELECT2 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+    <!-- SEMANTIC UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
     <!-- START NAVBAR -->
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -42,8 +47,10 @@
             </div>
         </div>
     </nav>
+
     <!-- END NAVBAR -->
     <div class="container-fluid">
+
         <div class="row">
 
 
@@ -89,10 +96,15 @@
                 <!-- New Project END -->
                 <hr>
                 <!-- START PROJECT TYPE -->
-                <div class="row" style="padding:15px">
-                    <div class="col-md-12">
-                        <h3>Projekt Type</h3>
-                    </div>
+                <div class="row">
+                    <table class="table">
+                        <tr>
+                            <th>Projekt Type</th>
+                        </tr>
+                        <tr>
+                            <td>
+
+                           
                     <div class="panel-group" id="accordion">
                         <div class="panel">
                             <div class="row">
@@ -115,10 +127,10 @@
 
                             <!-- START TIDER & MATERIALER COLLAPSE -->
                             <div id="collapseTidOgMaterialer" class="panel-collapse collapse in">
-                                <div class="css_greyBackgroundExpand css_expandMarginPadding">
+                                <div class="css_expandMarginPadding" style="text-align: left;">
                                     <h4><strong>Faktureringsmetode</strong></h4>
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-8">
                                             <select class="form-control css_noPaddingTopBottom" id="js_dropdownTidFaktureringSelect">
                                             <option value="">Ingen faktureringsmetode valgt</option>
                                             <option value="Project">Projekt timepris</option>
@@ -128,7 +140,7 @@
                                         </div>
                                         <!-- -->
                                         <!-- START Fakturering Project timepris-->
-                                        <div class="col-md-3 js_tableFaktureringProjectHide">
+                                        <div class="col-md-4 js_tableFaktureringProjectHide">
                                             <div class="col-md-4 css_noPaddingLeftRight">
                                                 <div style="float:right; padding-right:5; font-size: 16px;">
                                                     <b>kr.</b>
@@ -141,11 +153,10 @@
                                         <!-- END Fakturering Project timepris-->
 
                                     </div>
-
+                                    
                                     <div class="css_divPadding-top">
                                         <h4><strong>Budget</strong></h4>
-                                        <div class="col-md-4 css_removePadding">
-
+                                        <div class="col-md-8 css_removePadding">
                                             <select class="form-control css_noPaddingTopBottom" id="js_dropdownTidBudgetSelect">
                                             <option value="">Ingen faktureringsmetode valgt</option>
                                             <option value="ProjektTimer">Samlet projekttimer</option>
@@ -183,6 +194,7 @@
                                                 <input class="form-control">
                                             </div>
                                         </div>
+                                        <!-- END NON-BILLABLE COLLAPSE -->
 
                                         <br>
                                         <div class="css_divPadding-top">
@@ -193,13 +205,14 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- END PANEL-GROUP -->
                                 </div>
                             </div>
                             <!-- END TIDER & MATERIALER COLLAPSE -->
 
                             <!-- START FASTLAGT PRIS COLLAPSE -->
                             <div id="collapseFastlagtPris" class="panel-collapse collapse">
-                                <div class="css_greyBackgroundExpand css_expandMarginPadding">
+                                <div class="css_expandMarginPadding" style="text-align: left;">
                                     <div class="form-inline">
                                         <h4><strong>Faktureringsmetode</strong></h4>
                                         <p class="help-block">Indsæt det totale beløb du vil bruge på projektet</p>
@@ -211,7 +224,7 @@
 
                             <!-- START NON-BILLABLE COLLAPSE -->
                             <div id="collapseNonBillable" class="panel-collapse collapse">
-                                <div class="css_greyBackgroundExpand css_expandMarginPadding">
+                                <div class="css_expandMarginPadding" style="text-align: left;">
                                     <h4><strong>Budget</strong></h4>
                                     <select class="js_select2" style="width:30%">
                                         <option value="I">Ingen faktureringsmetode valgt</option>
@@ -224,10 +237,10 @@
                                 </div>
                             </div>
                             <!-- END NON-BILLABLE COLLAPSE -->
+                            </td>
+                        </tr>
+                    </table>
 
-                        </div>
-                        <!-- END PANEL-GROUP -->
-                    </div>
                 </div>
                 <!-- END PROJECT TYPE / ROW -->
 
@@ -239,7 +252,7 @@
                 <!-- ASSIGNMENT PICKER START -->
                 <div class="row">
                     <div class="col-sm-12">
-                        <table class="table">
+                        <table class="table" id="taskTable">
                             <tr style="background-color: #F2F2F2">
                                 <th style="width: 40%">
                                     Opgaver
@@ -264,9 +277,13 @@
                                     <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Forretningsudvikling
                                 </td>
                                 <td>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" value=""></label>
-                                    </div>
+                                    <select class="js_select2Fakturabel" style="width:100%">
+                                        <optgroup label="Vælg venligst">
+                                            <option value="ja">Ja</option>
+                                            <option value="null">-</option>
+                                            <option value="Nej">Nej</option>
+                                        </optgroup>
+                                    </select>
                                 </td>
                                 <td class="js_tableFaktureringOpgaveHide">
                                     <div class="col-md-4 css_noPaddingLeftRight">
@@ -303,9 +320,13 @@
                                     <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Grafisk design
                                 </td>
                                 <td>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" value=""></label>
-                                    </div>
+                                    <select class="js_select2Fakturabel" style="width:100%">
+                                        <optgroup label="Vælg venligst">
+                                            <option value="ja">Ja</option>
+                                            <option value="null">-</option>
+                                            <option value="Nej">Nej</option>
+                                        </optgroup>
+                                    </select>
                                 </td>
                                 <td class="js_tableFaktureringOpgaveHide">
                                     <div class="col-md-4 css_noPaddingLeftRight">
@@ -343,9 +364,13 @@
 
                                 </td>
                                 <td>
-                                    <div class="checkbox">
-                                        <label><input type="checkbox" value=""></label>
-                                    </div>
+                                    <select class="js_select2Fakturabel" style="width:100%">
+                                        <optgroup label="Vælg venligst">
+                                            <option value="ja">Ja</option>
+                                            <option value="null">-</option>
+                                            <option value="Nej">Nej</option>
+                                        </optgroup>
+                                    </select>
                                 </td>
                                 <td class="js_tableFaktureringOpgaveHide">
                                     <div class="col-md-4 css_noPaddingLeftRight">
@@ -383,57 +408,12 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-sm-12">
-                        <select class="js_select2" multiple="multiple" style="width:100%">
-                    <optgroup label="Seneste">
-                        <option value="R">#Frontend </option>
-                        <option value="C">#SEO</option>
-                        <option value="C">#Database</option>
-                    </optgroup>
-                    <optgroup label="Andre">
-                        <option value="C">#Møde</option>
-                        <option value="M">#Backend</option>
-                        <option value="S">#Hjemmeside</option>
-                    </optgroup>
-                </select>
-                    </div>
+                <div>
+                    <input class="form-control" id="taskInput" type="text" placeholder="Tilføj opgave"/>
                 </div>
 
-                <!-- ASSIGNMENT PICKER END -->
 
-                <hr>
-                <br>
-
-                <!-- LABEL PICKER START -->
-
-                <div class="row">
-                    <div class="col-sm-12" class="form-control">
-                        <table id="myTable" class="table">
-                            <tr style="background-color: #F2F2F2">
-                                <th style="width: 95%">
-                                    Labels
-                                </th>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Forside
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    SQL
-                                </td>
-                            </tr>
-                        </table>
-
-                    </div>
-                </div>
-
-                <div class="dropdown">
-                    <input type="text" class="dropdown-toggle" data-toggle="dropdown" />
-                </div>
-                <!--
+                <!-- 
                 <div class="row">
                     <div class="col-sm-12">
                         <select class="js_select2" multiple="multiple" style="width:100%">
@@ -452,16 +432,16 @@
                 </div>
                 -->
 
-                <!-- LABEL PICKER END -->
+                <!-- ASSIGNMENT PICKER END -->
 
-                <hr>
+
+                <br>
                 <br>
 
                 <!-- WORKERS PICKER START -->
-
                 <div class="row">
                     <div class="col-sm-12" class="form-control">
-                        <table class="table">
+                        <table class="table" id="employeeTable">
                             <tr style="background-color: #F2F2F2">
                                 <th style="width: 30%">
                                     Medarbejdere
@@ -484,16 +464,23 @@
                             </tr>
                             <tr>
                                 <td style="text-align: left">
-                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>                                    Mohammed
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                    <span>Mohammed</span>
                                 </td>
                                 <td>
-                                    <label><input type="checkbox" value=""></label>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="example" value="">
+                                    </div>
                                 </td>
                                 <td>
-                                    <label><input type="checkbox" value=""></label>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="example" value="">
+                                    </div>
                                 </td>
                                 <td>
-                                    <label><input type="checkbox" value=""></label>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="example" value="">
+                                    </div>
                                 </td>
                                 <td class="js_tableFaktureringPersonHide" style="width: 20%">
                                     <div class="col-md-4 css_noPaddingLeftRight">
@@ -520,154 +507,198 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-sm-12">
-                        <select class="js_select2" multiple="multiple" style="width:100%">
-                    <optgroup label="Seneste">
-                        <option value="R">#Frontend </option>
-                        <option value="C">#SEO</option>
-                        <option value="C">#Database</option>
-                    </optgroup>
-                    <optgroup label="Andre">
-                        <option value="C">#Møde</option>
-                        <option value="M">#Backend</option>
-                        <option value="S">#Hjemmeside</option>
-                    </optgroup>
-                </select>
-                    </div>
+                <div>
+                    <input class="js_Select2 form-control" id="employeeInput" type="text" list="employees" placeholder="Tilføj medarbejder" />
+                    <datalist id="employees">
+                        <option value="Philip" />
+                        <option value="Casper" />
+                        <option value="Mathias" />
+                        <option value="Jens" />
                 </div>
                 <!-- WORKERS PICKER END -->
 
-                <hr>
+                <br>
                 <br>
 
-                <!-- START LAV NY TEMPLATE BUTTON -->
+                <!-- LABEL PICKER START -->
+
                 <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#NyTemplateCollapse">Lav ny template</button>
+                    <div class="col-sm-12" class="form-control">
+                        <table id="labelTable" class="table">
+                            <tr style="background-color: #F2F2F2">
+                                <th style="width: 95%">
+                                    Labels
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                    <span>Fase 1</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                    <span>Frontend</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                    <span>Fase 2</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                    <span>Backend</span>
+                                </td>
+                            </tr>
+                        </table>
+
                     </div>
                 </div>
-                <!-- END LAV NY TEMPLATE BUTTON -->
+
+                <div>
+                    <input class="form-control" id="labelInput" type="text" placeholder="Tilføj label" />
+                </div>
+                <!-- LABEL PICKER END -->
+
+                <br>
+                <br>
+
+                <!-- START LIST OF TEMPLATES -->
+                <div class="row">
+                    <div class="col-sm-12" class="form-control">
+                        <table class="table">
+                            <tr style="background-color: #F2F2F2">
+                                <th>
+                                    Templates
+                                </th>
+                                <th>
+                                    Medarbejdere
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                    <span>Scrum</span>
+                                </td>
+                                <td>
+                                    <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                        <optgroup label="Medarbejdere">
+                                            <option value="Je">Jens 👤</option>
+                                            <option value="Ma">Maria 👤</option>
+                                            <option value="Lo">Lone 👤</option> 
+                                            <option value="Tr">Trine 👤</option>
+                                            <option value="Al">Albert 👤</option>
+                                            <option value="Ol">Ole 👤</option> 
+                                            <option value="Ha">Hans 👤</option>
+                                            <option value="Ja">Jan 👤</option>
+                                            <option value="Mat">Mathias 👤</option> 
+                                        </optgroup>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                    <span>Frontend</span>
+                                </td>
+                                <td>
+                                    <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                        <optgroup label="Medarbejdere">
+                                            <option value="Je">Jens 👤</option>
+                                            <option value="Ma">Maria 👤</option>
+                                            <option value="Lo">Lone 👤</option> 
+                                            <option value="Tr">Trine 👤</option>
+                                            <option value="Al">Albert 👤</option>
+                                            <option value="Ol">Ole 👤</option> 
+                                            <option value="Ha">Hans 👤</option>
+                                            <option value="Ja">Jan 👤</option>
+                                            <option value="Mo">Mohammed 👤</option> 
+                                        </optgroup>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left">
+                                    <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                    <span>Backend</span>
+                                </td>
+                                <td>
+                                    <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                        <optgroup label="Medarbejdere">
+                                            <option value="Je">Jens 👤</option>
+                                            <option value="Ma">Maria 👤</option>
+                                            <option value="Lo">Lone 👤</option> 
+                                            <option value="Tr">Trine 👤</option>
+                                            <option value="Al">Albert 👤</option>
+                                            <option value="Ol">Ole 👤</option> 
+                                            <option value="Ha">Hans 👤</option>
+                                            <option value="Ja">Jan 👤</option>
+                                            <option value="Mo">Mohammed 👤</option> 
+                                        </optgroup>
+                                    </select>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </div>
+                <!-- END LIST OF TEMPLATES -->
 
                 <hr>
                 <br>
 
-            </div>
-            <!-- END COL-MD-6 -->
-
-
-
-            <div class="col-md-3">
-            </div>
-
-        </div>
-        <!-- END ROW -->
-    </div>
-    <!-- END CONTAINER -->
-
-
-
-    <!-- LINK TO SCRIPT.JS -->
-    <script src="script.js"></script>
-
-    <!-- SCRIPTS START -->
-
-    <!-- SELECT2, USED FOR DROPDOWN MENU -->
-
-    <script>
-        $(document).ready(function () {
-            $(".js_select2").select2();
-            $(".modal .js_select2").select2();
-        });
-    </script>
-
-    <!-- SCRIPTS END -->
-</body>
-
-</html>
-
-
-<!-- START TEMPLATE FORM -->
-<div id="NyTemplateCollapse" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Ny Template</h4>
-            </div>
-            <div class="modal-body">
-                <!-- START FORM TAG -->
-                <form>
-
-                    <!-- START EKSISTERENDE TEMPLATE -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h5>Brug eksisterende templates</h5>
-                        </div>
+                <!-- START OPRET TEMPLATE BUTTON & GEM OG ANNULER KNAP -->
+                <div class="row">
+                    <div class="col-sm-12">
                         <div>
-                            <div class="col-md-3">
-                                <div class="css_padding5px">
-                                    <a class="btn btn-primary" style="width:100%">Barn Syg</a>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="css_padding5px">
-                                    <a class="btn btn-primary" style="width:100%">Syg</a>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="css_padding5px">
-                                    <a class="btn btn-primary" style="width:100%">Ferie</a>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="css_padding5px">
-                                    <select class="js_select2" style="width:100%">
-                                        <option value="I">Scrum Møde</option>
-                                        <option value="M">Pause</option>
-                                        <option value="M">Orlov</option>
-                                    </select>
-                                </div>
-                            </div>
+                            <button class="btn btn-success">Gem projekt</button>
+                            <button class="btn btn-primary" data-parent="#templateParent" data-toggle="collapse" href="#templateCollapse" id="opretTemplate">Opret template</button>
+                            <button class="btn btn-default">Annuler</button>
+                            <br><br><br>
                         </div>
                     </div>
-                    <!-- END EKSISTERENDE TEMPLATE -->
+                </div>
 
-                    <!-- START Tidsregistrering TITEL -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <hr>
-                            <h4>Tidsregistrering</h4>
-                        </div>
-                    </div>
-                    <!-- END Tidsregistrering TITEL -->
+                <!-- START TEMPLATE FORM -->
+                <div id="templateCollapse" class="collapse">
+                    <form>
 
+                        <!-- START Tidsregistrering TITEL -->
+                        <br>
+                        <!-- END Tidsregistrering TITEL -->
 
-                    <!-- START FIRMA/PROJEKT -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label>Firma</label>
-                            <select class="js_select2" style="width:100%">
+                        <!-- START FIRMA/PROJEKT -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Firma</label>
+                                <select class="js_select2" style="width:100%">
                                 <option value="I">IKEA</option>
                                 <option value="M">Mash</option>
                             </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label>Projekt</label>
-                            <select class="js_select2" style="width:100%">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Projekt</label>
+                                <select class="js_select2" style="width:100%">
                                 <option value="AL">Hjemmeside</option>
                                 <option value="WY">App</option>
                             </select>
+                            </div>
                         </div>
-                    </div>
-                    <!-- END FIRMA/PROJEKT -->
-                    <br>
-                    <!-- START LABELS/MEDARBEJDERE -->
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label>Labels</label>
-                            <br>
-                            <select class="js_select2" multiple="multiple" style="width:100%">
+                        <!-- END FIRMA/PROJEKT -->
+
+                        <br>
+
+                        <!-- START LABELS/MEDARBEJDERE -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Labels</label>
+                                <br>
+                                <select class="js_select2" multiple="multiple" style="width:100%">
                                 <optgroup label="Seneste">
                                     <option value="R">#Frontend </option>
                                     <option value="C">#SEO</option>
@@ -679,14 +710,13 @@
                                     <option value="S">#Hjemmeside</option>
                                 </optgroup>
                             </select>
-                        </div>
+                            </div>
 
-                        <div class="col-md-6">
-                            <label>Medarbejdere</label>
-                            <br>
-                            <select class="js_select2" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                            <div class="col-md-6">
+                                <label>Medarbejdere</label>
+                                <br>
+                                <select class="js_select2" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
                                 <optgroup label="Seneste">
-                                    <option selected="selected" value="R">Philip 👤 </option>
                                     <option value="C">Mikkel 👤</option>
                                     <option value="P">Peter 👤</option>
                                 </optgroup>
@@ -696,46 +726,70 @@
                                     <option value="S">Lone 👤</option> 
                                 </optgroup>
                             </select>
-                        </div>
-                    </div>
-                    <!-- END LABELS/MEDARBEJDERE -->
-
-                </form>
-                <!-- END FORM TAG -->
-
-                <br>
-
-                <!-- START MODAL-FOOTER -->
-                <div class="modal-footer">
-                    <div class="row" style="padding: 10px">
-                        <div class="col-md-6">
-                            <div class="css_padding5px">
-                                <input style="float: left" type="checkbox" checked data-toggle="toggle" data-on="Fakturerbar" data-off="Ikke fakturerbar"
-                                    data-onstyle="success" data-offstyle="danger" data-width="100%">
                             </div>
                         </div>
+                        <!-- END LABELS/MEDARBEJDERE -->
 
-                        <div class="col-md-6">
-                            <div class="col-md-6 css_removePadding">
+                        <!-- START FOOTER TEMPLATE -->
+                        <div class="row" style="padding: 10px">
+                            <div class="col-md-6">
                                 <div class="css_padding5px">
-                                    <button class="btn btn-primary" data-dismiss="modal" style="width:100%">Gem template</button>
+                                    <input style="float: left" type="checkbox" checked data-toggle="toggle" data-on="Fakturerbar" data-off="Ikke fakturerbar"
+                                        data-onstyle="success" data-offstyle="danger" data-width="100%">
                                 </div>
                             </div>
-                            <div class="col-md-6 css_removePadding">
-                                <div class="css_padding5px">
-                                    <button class="btn btn-default" data-dismiss="modal" style="width:100%">Luk</button>
+
+                            <div class="col-md-6">
+                                <div class="col-md-6 css_removePadding">
+                                    <div class="css_padding5px">
+                                        <button class="btn btn-primary" data-dismiss="collapse" style="width:100%">Gem template</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 css_removePadding">
+                                    <div class="css_padding5px">
+                                        <button class="btn btn-default" data-dismiss="collapse" style="width:100%">Luk</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <!-- END FOOTER TEMPLATE -->
+                    </form>
+                    <br>
+                    <!-- END TEMPLATE FORM -->
                 </div>
-                <!-- END MODAL-FOOTER -->
-
+                <!-- END OPRET TEMPLATE & GEM OG ANNULER KNAP -->
             </div>
-            <!-- END MODAL-BODY -->
+            <!-- END COL-MD-6 -->
+
+            <div class="col-md-3">
+            </div>
+
         </div>
-        <!-- END MODAL-CONTENT -->
+        <!-- END ROW -->
     </div>
-    <!-- END MODAL-DIALOG -->
-</div>
-<!-- END MODAL -->
+    <!-- END CONTAINER -->
+ 
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- START FOOTER -->
+<footer>Alpha Solutions A/S</footer>
+<!-- END FOOTER -->
+
+
+<!-- SELECT2, USED FOR DROPDOWN MENU -->
+
+<script>
+    $(document).ready(function () {
+        $(".js_select2").select2();
+        $(".modal .js_select2").select2();
+    });
+
+</script>
+
+<!-- SCRIPTS END -->
+</body>
+
+</html>

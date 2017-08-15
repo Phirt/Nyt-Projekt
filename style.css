@@ -1,7 +1,14 @@
-
+body {
+    background-color: white;
+}
 /* TABLTE TD CENTEr */
 .table td {
    text-align: center;   
+}
+
+table th {
+    background-color: #5A93C4;
+    color: white;
 }
 
 
@@ -100,6 +107,7 @@
     background-color: #1773C3;
  }
 
+ /* CHANGE COLOR OF HR */
  hr {
     border: none;
     height: 1px;
@@ -116,4 +124,16 @@
 .css_expandMarginPadding {
   padding: 10px;
   margin-top: 10px;
+}
+ /* REMOVE BORDERS ON TABLE */
+.table.removeBordersTable tr td, .table.removeBordersTable tr th {
+    border-width: 0;
+}
+
+footer {
+    padding: 1em;
+    color: white;
+    background-color: #5A93C4;
+    clear: left;
+    text-align: center;
 }

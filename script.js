@@ -165,17 +165,18 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
+
+    $("#opretTemplate").on("click", function () {
+        $('#templateCollapse').on('shown.bs.collapse', function () {
+            $('html, body').animate({
+                scrollTop: $("footer").offset().top
+            }, 1);
+        })
+
+    });
 });
 
 
-$("#opretTemplate").on("click", function () {
-    $('#templateCollapse').on('shown.bs.collapse', function () {
-        $('html, body').animate({
-            scrollTop: $("footer").offset().top
-        }, 1);
-    })
-
-});
 
 // SELECT2 AND SEMANTIC UI
 $(document).ready(function () {
@@ -194,6 +195,12 @@ $(document).ready(function () {
             text: 'Tilføj medarbejder'
         }
     });
+
+    $(".js_select2Fakturabel").select2({
+        minimumResultsForSearch: -1
+    });
+
+    
 
     $(".modal .js_select2").select2();
 

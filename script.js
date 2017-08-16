@@ -297,6 +297,10 @@ $(document).ready(function () {
         minimumResultsForSearch: -1
     });
 
+    $(".js_select2VælgOpgaver").select2({
+        placeholder: "Vælg Opgave"
+      });
+
 
 
     $(".modal .js_select2").select2();

@@ -713,6 +713,79 @@
                                     <!-- END ROW -->
                                 </table>
                                 <button class="btn btn-primary" data-parent="#templateParent" data-toggle="collapse" href="#templateCollapse" id="opretTemplate">Opret template</button>
+
+                                <br>
+                                <br>
+                                <!-- START TEMPLATE FORM -->
+                                <div id="templateCollapse" class="collapse">
+                                    <form>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Labels</label>
+                                                <br>
+                                                <select class="js_select2" multiple="multiple" style="width:100%">
+                                                <optgroup label="Vælg label">
+                                                    <option value="R">#Fase1 </option>
+                                                    <option value="C">#Fase2</option>
+                                                    <option value="C">#Backend</option>
+                                                    <option value="C">#Frontend</option>
+                                                </optgroup>
+                                            </select>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label>Opgaver</label>
+                                                <br>
+                                                <select class="js_select2VælgOpgaver" style="width:100%">
+                                                    <option></option>
+                                                    <option value="C">Forretningsudvikling</option>
+                                                    <option value="P">Grafisk design</option>
+                                                    <option value="P">Projektledelse</option>
+                                             </select>
+                                            </div>
+                                        </div>
+                                        <!-- START FIRMA/PROJEKT -->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Note</label>
+                                                <br>
+                                                <textarea class="form-control"></textarea>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label></label>
+                                                <br>
+                                                <div class="css_padding5px">
+                                                    <input style="float: left" type="checkbox" checked data-toggle="toggle" data-on="Fakturerbar" data-off="Ikke fakturerbar"
+                                                        data-onstyle="success" data-offstyle="danger" data-width="100%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END FIRMA/PROJEKT -->
+
+                                        <br>
+
+                                        <!-- START LABELS/MEDARBEJDERE -->
+                                        <!-- END LABELS/MEDARBEJDERE -->
+
+                                        <!-- START FOOTER TEMPLATE -->
+                                        <div class="row" style="padding: 10px">
+                                            <div class="col-md-6 css_removePadding">
+                                                <div class="css_padding5px">
+                                                    <button class="btn btn-primary" data-dismiss="collapse" style="width:100%">Gem template</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 css_removePadding">
+                                                <div class="css_padding5px">
+                                                    <button class="btn btn-default" data-dismiss="collapse" style="width:100%">Luk</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END FOOTER TEMPLATE -->
+                                    </form>
+                                    <!-- END TEMPLATE FORM -->
+                                </div>
+                                <!-- END OPRET TEMPLATE & GEM OG Annuller KNAP -->
                             </div>
                         </div>
                         <!-- END LIST OF TEMPLATES -->
@@ -732,100 +805,7 @@
                             </div>
                         </div>
 
-                        <!-- START TEMPLATE FORM -->
-                        <div id="templateCollapse" class="collapse">
-                            <form>
 
-                                <!-- START Tidsregistrering TITEL -->
-                                <br>
-                                <!-- END Tidsregistrering TITEL -->
-
-                                <!-- START FIRMA/PROJEKT -->
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Firma</label>
-                                        <select class="js_select2" style="width:100%">
-                                <option value="I">IKEA</option>
-                                <option value="M">Mash</option>
-                            </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label>Projekt</label>
-                                        <select class="js_select2" style="width:100%">
-                                <option value="AL">Hjemmeside</option>
-                                <option value="WY">App</option>
-                            </select>
-                                    </div>
-                                </div>
-                                <!-- END FIRMA/PROJEKT -->
-
-                                <br>
-
-                                <!-- START LABELS/MEDARBEJDERE -->
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Labels</label>
-                                        <br>
-                                        <select class="js_select2" multiple="multiple" style="width:100%">
-                                <optgroup label="Seneste">
-                                    <option value="R">#Frontend </option>
-                                    <option value="C">#SEO</option>
-                                    <option value="C">#Database</option>
-                                </optgroup>
-                                <optgroup label="Andre">
-                                    <option value="C">#Møde</option>
-                                    <option value="M">#Backend</option>
-                                    <option value="S">#Hjemmeside</option>
-                                </optgroup>
-                            </select>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label>Medarbejdere</label>
-                                        <br>
-                                        <select class="js_select2" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
-                                <optgroup label="Seneste">
-                                    <option value="C">Mikkel 👤</option>
-                                    <option value="P">Peter 👤</option>
-                                </optgroup>
-                                <optgroup label="Andre">
-                                    <option value="C">Jens 👤</option>
-                                    <option value="M">Maria 👤</option>
-                                    <option value="S">Lone 👤</option> 
-                                </optgroup>
-                            </select>
-                                    </div>
-                                </div>
-                                <!-- END LABELS/MEDARBEJDERE -->
-
-                                <!-- START FOOTER TEMPLATE -->
-                                <div class="row" style="padding: 10px">
-                                    <div class="col-md-6">
-                                        <div class="css_padding5px">
-                                            <input style="float: left" type="checkbox" checked data-toggle="toggle" data-on="Fakturerbar" data-off="Ikke fakturerbar"
-                                                data-onstyle="success" data-offstyle="danger" data-width="100%">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="col-md-6 css_removePadding">
-                                            <div class="css_padding5px">
-                                                <button class="btn btn-primary" data-dismiss="collapse" style="width:100%">Gem template</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 css_removePadding">
-                                            <div class="css_padding5px">
-                                                <button class="btn btn-default" data-dismiss="collapse" style="width:100%">Luk</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END FOOTER TEMPLATE -->
-                            </form>
-                            <br>
-                            <!-- END TEMPLATE FORM -->
-                        </div>
-                        <!-- END OPRET TEMPLATE & GEM OG Annuller KNAP -->
                     </div>
                     <!-- END COL-MD-6 -->
 

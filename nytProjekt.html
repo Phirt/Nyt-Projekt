@@ -439,27 +439,6 @@
                         <div>
                             <input class="form-control" id="taskInput" type="text" placeholder="Tilføj opgave" />
                         </div>
-
-
-                        <!-- 
-                <div class="row">
-                    <div class="col-sm-12">
-                        <select class="js_select2" multiple="multiple" style="width:100%">
-                    <optgroup label="Seneste">
-                        <option value="R">#Frontend </option>
-                        <option value="C">#SEO</option>
-                        <option value="C">#Database</option>
-                    </optgroup>
-                    <optgroup label="Andre">
-                        <option value="C">#Møde</option>
-                        <option value="M">#Backend</option>
-                        <option value="S">#Hjemmeside</option>
-                    </optgroup>
-                </select>
-                    </div>
-                </div>
-                -->
-
                         <!-- ASSIGNMENT PICKER END -->
 
 
@@ -506,9 +485,13 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <div class="ui checkbox">
-                                                <input type="checkbox" name="example" value="">
-                                            </div>
+                                            <select class="js_select2Fakturabel" style="width:75%">
+                                                        <optgroup label="Vælg venligst">
+                                                            <option value="ja">Ja</option>
+                                                            <option value="null">-</option>
+                                                            <option value="Nej">Nej</option>
+                                                        </optgroup>
+                                                    </select>
                                         </td>
                                         <td class="js_tableFaktureringPersonHide" style="width: 20%">
                                             <div class="col-md-4 css_noPaddingLeftRight">
@@ -672,18 +655,18 @@
                                         <tr>
                                             <td colspan="5" class="css_templatesMedarbejderRowStyling">
                                                 <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
-                                                        <optgroup label="Medarbejdere">
-                                                            <option value="Je">Jens 👤</option>
-                                                            <option value="Ma">Maria 👤</option>
-                                                            <option value="Lo">Lone 👤</option> 
-                                                            <option value="Tr">Trine 👤</option>
-                                                            <option value="Al">Albert 👤</option>
-                                                            <option value="Ol">Ole 👤</option> 
-                                                            <option value="Ha">Hans 👤</option>
-                                                            <option value="Ja">Jan 👤</option>
-                                                            <option value="Mo">Mohammed 👤</option> 
-                                                        </optgroup>
-                                                    </select>
+                                                    <optgroup label="Medarbejdere">
+                                                        <option value="Je">Jens 👤</option>
+                                                        <option value="Ma">Maria 👤</option>
+                                                        <option value="Lo">Lone 👤</option> 
+                                                        <option value="Tr">Trine 👤</option>
+                                                        <option value="Al">Albert 👤</option>
+                                                        <option value="Ol">Ole 👤</option> 
+                                                        <option value="Ha">Hans 👤</option>
+                                                        <option value="Ja">Jan 👤</option>
+                                                        <option value="Mo">Mohammed 👤</option> 
+                                                    </optgroup>
+                                                </select>
                                             </td>
                                         </tr>
                                     </tr>
@@ -710,7 +693,7 @@
                                             <a class="btn btn-primary" aria-label="Left Align"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
                                         </td>
                                         <tr>
-                                            <td colspan="5" class="css_templatesMedarbejderRowStyling">
+                                            <td colspan="5" class="">
                                                 <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
                                                         <optgroup label="Medarbejdere">
                                                             <option value="Je">Jens 👤</option>
@@ -729,7 +712,7 @@
                                     </tr>
                                     <!-- END ROW -->
                                 </table>
-
+                                <button class="btn btn-primary" data-parent="#templateParent" data-toggle="collapse" href="#templateCollapse" id="opretTemplate">Opret template</button>
                             </div>
                         </div>
                         <!-- END LIST OF TEMPLATES -->
@@ -742,7 +725,7 @@
                             <div class="col-sm-12">
                                 <div>
                                     <button class="btn btn-success">Gem projekt</button>
-                                    <button class="btn btn-primary" data-parent="#templateParent" data-toggle="collapse" href="#templateCollapse" id="opretTemplate">Opret template</button>
+
                                     <button class="btn btn-default">Annuller</button>
                                     <br><br><br>
                                 </div>

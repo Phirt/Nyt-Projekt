@@ -74,8 +74,7 @@
                         <table class='table removeBordersTable'>
                             <tr>
                                 <td class="col-sm-2" style="text-align: left"><label>Firma</label></td>
-                                <td class="col-sm-8"><input class="form-control" style="padding: 0px" type="text" name="businessName"></td>
-                                <td class="col-sm-2"><button class="btn btn-default centerButton"><span class="glyphicon glyphicon-plus"></span> Tilføj firma</button></td>
+                                <td class="col-sm-10"><input class="form-control" style="padding: 0px" type="text" name="businessName"></td>
                             </tr>
                             <tr>
                                 <td class="col-sm-2" style="text-align: left"><label>Projekt navn</label></td>
@@ -117,12 +116,12 @@
                                                 </div>
                                                 <div class="col-md-4 css_divPadding-top">
                                                     <div>
-                                                        <a class="btn btn-default" data-parent="#accordion" data-toggle="collapse" href="#collapseFastlagtPris" style="width:100%">Fastlagt Pris</a>
+                                                        <a class="btn btn-default" data-parent="#accordion" data-toggle="collapse" href="#collapseFastlagtPris" style="width:100%">Fast Pris</a>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 css_divPadding-top">
                                                     <div>
-                                                        <a class="btn btn-default" data-parent="#accordion" data-toggle="collapse" href="#collapseNonBillable" style="width:100%">Non-Billable</a>
+                                                        <a class="btn btn-default" data-parent="#accordion" data-toggle="collapse" href="#collapseNonBillable" style="width:100%">Ufakturabel</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -160,7 +159,7 @@
                                                         <h4><strong>Budget</strong></h4>
                                                         <div class="col-md-6 css_removePadding">
                                                             <select class="form-control css_noPaddingTopBottom" id="js_dropdownTidBudgetSelect">
-                                            <option value="">Ingen faktureringsmetode valgt</option>
+                                            <option value="">Intet Budget</option>
                                             <option value="ProjektTimer">Samlet projekttimer</option>
                                             <option value="ProjektPris">Samlet projektudgifter</option>
                                             <option value="OpgaveTimer">Timer pr. opgave</option>
@@ -216,8 +215,7 @@
                                             <div id="collapseFastlagtPris" class="panel-collapse collapse">
                                                 <div class="css_expandMarginPadding" style="text-align: left;">
                                                     <div class="form-inline">
-                                                        <h4><strong>Faktureringsmetode</strong></h4>
-                                                        <p class="help-block">Indsæt det totale beløb du vil bruge på projektet</p>
+                                                        <p class="help-block">Indtast det aftalte beløb</p>
                                                         <label>kr.</label> <input type="text" class="form-control" />
                                                     </div>
                                                 </div>
@@ -232,7 +230,7 @@
 
                                                         <div class="col-md-6">
                                                             <select class="form-control css_noPaddingTopBottom" id="js_dropdownNonbillableBudgetSelect">
-                                                            <option value="">Ingen faktureringsmetode valgt</option>
+                                                            <option value="">Intet Budget</option>
                                                             <option value="ProjektTimer">Samlet projekttimer</option>
                                                             <option value="OpgaveTimer">Timer pr. opgave</option>
                                                             <option value="PersonTimer">Timer pr. person</option>
@@ -739,13 +737,13 @@
                         <hr>
                         <br>
 
-                        <!-- START OPRET TEMPLATE BUTTON & GEM OG ANNULER KNAP -->
+                        <!-- START OPRET TEMPLATE BUTTON & GEM OG Annuller KNAP -->
                         <div class="row">
                             <div class="col-sm-12">
                                 <div>
                                     <button class="btn btn-success">Gem projekt</button>
                                     <button class="btn btn-primary" data-parent="#templateParent" data-toggle="collapse" href="#templateCollapse" id="opretTemplate">Opret template</button>
-                                    <button class="btn btn-default">Annuler</button>
+                                    <button class="btn btn-default">Annuller</button>
                                     <br><br><br>
                                 </div>
                             </div>
@@ -844,7 +842,7 @@
                             <br>
                             <!-- END TEMPLATE FORM -->
                         </div>
-                        <!-- END OPRET TEMPLATE & GEM OG ANNULER KNAP -->
+                        <!-- END OPRET TEMPLATE & GEM OG Annuller KNAP -->
                     </div>
                     <!-- END COL-MD-6 -->
 

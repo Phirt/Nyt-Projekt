@@ -138,3 +138,12 @@ footer {
     clear: left;
     text-align: center;
 }
+
+table {
+    border-collapse: separate;
+}
+
+#templatesTable .css_templatesMedarbejderRowStyling {
+    border: none;
+    padding-bottom: 40px;
+}

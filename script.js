@@ -102,6 +102,8 @@ $(document).ready(function () {
 
             // TILFØJ SEMANTIC UI PÅ CHECKBOXES 
             $('.ui.checkbox').checkbox();
+            //Opdaterer tablet så rækken passer med hvilken dropdown der er valgt
+            updateTables();
 
         }
 
@@ -180,6 +182,9 @@ $(document).ready(function () {
                 minimumResultsForSearch: -1
             });
 
+            //Opdaterer tablet så rækken passer med hvilken dropdown der er valgt
+            updateTables();
+
         }
     });
 
@@ -203,23 +208,22 @@ function updateTables() {
         $(".js_tableFaktureringProjectHide").show();
     }
 
-
     $(".js_tableBudgetProjektTimerHide").hide();
     $(".js_tableBudgetProjektPrisHide").hide();
     $(".js_tableBudgetOpgaveTimerHide").hide();
     $(".js_tableBudgetPersonTimerHide").hide();
     $(".js_tableBudgetOpgavePrisHide").hide();
 
-    if ($("#js_dropdownTidBudgetSelect").val() === "ProjektTimer") {
+    if ($("#js_dropdownTidBudgetSelect").val() === "ProjektTimer" || $("#js_dropdownNonbillableBudgetSelect").val() === "ProjektTimer") {
         $(".js_tableBudgetProjektTimerHide").show();
     }
     if ($("#js_dropdownTidBudgetSelect").val() === "ProjektPris") {
         $(".js_tableBudgetProjektPrisHide").show();
     }
-    if ($("#js_dropdownTidBudgetSelect").val() === "OpgaveTimer") {
+    if ($("#js_dropdownTidBudgetSelect").val() === "OpgaveTimer" || $("#js_dropdownNonbillableBudgetSelect").val() === "OpgaveTimer") {
         $(".js_tableBudgetOpgaveTimerHide").show();
     }
-    if ($("#js_dropdownTidBudgetSelect").val() === "PersonTimer") {
+    if ($("#js_dropdownTidBudgetSelect").val() === "PersonTimer" || $("#js_dropdownNonbillableBudgetSelect").val() === "PersonTimer") {
         $(".js_tableBudgetPersonTimerHide").show();
     }
     if ($("#js_dropdownTidBudgetSelect").val() === "OpgavePris") {
@@ -236,6 +240,12 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#js_dropdownTidBudgetSelect").change(function (e) {
+        updateTables();
+    });
+});
+
+$(document).ready(function () {
+    $("#js_dropdownNonbillableBudgetSelect").change(function (e) {
         updateTables();
     });
 });

@@ -1,5 +1,6 @@
 body {
     background-color: white;
+    font-family: 'Open Sans', sans-serif;
 }
 /* TABLTE TD CENTEr */
 .table td {
@@ -45,7 +46,7 @@ table th {
  
 /* START Default hidden billing options*/
 
-/*Fakturering */
+/*Fakturering*/ 
 .js_tableFaktureringOpgaveHide {
      display: none;
 }

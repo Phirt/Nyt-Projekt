@@ -1,7 +1,9 @@
+/* BACKGROUND AND FONT */
 body {
     background-color: white;
     font-family: 'Open Sans', sans-serif;
 }
+
 /* TABLTE TD CENTEr */
 .table td {
    text-align: center;   
@@ -46,7 +48,7 @@ table th {
  
 /* START Default hidden billing options*/
 
-/*Fakturering*/ 
+/*BILLING*/ 
 .js_tableFaktureringOpgaveHide {
      display: none;
 }
@@ -85,7 +87,7 @@ table th {
   }
 
 /* 
-    FOR AT FIKSE SCROLLING MENS MODAL ER ÅBEN 
+    FIX SCROLLING WHILE A MODAL IS OPEN 
 */
 .modal-open {
     overflow: visible; /* DEFAULT: hidden */
@@ -137,4 +139,13 @@ footer {
     background-color: #5A93C4;
     clear: left;
     text-align: center;
+}
+
+table {
+    border-collapse: separate;
+}
+
+#templatesTable .css_templatesMedarbejderRowStyling {
+    border: none;
+    padding-bottom: 40px;
 }

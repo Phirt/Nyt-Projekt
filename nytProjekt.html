@@ -86,10 +86,16 @@
                                 <td class="col-sm-10"><input class="form-control" type="date" name="date" id="dateofbirth" /></td>
                             </tr>
                             <tr>
-                                <td class="col-sm-2" style="text-align: left"><label>Note </label><a style="float: right" class="glyphicon glyphicon-info-sign" data-toggle="tooltip"
-                                        title="Valgfri, men anbefales. Tilføj note."></a> </td>
+                                <td class="col-sm-2" style="text-align: left"><label>Ekstern note </label><a style="float: right" class="glyphicon glyphicon-info-sign" data-toggle="tooltip"
+                                        title="Ekstern note kan ses af kunde"></a> </td>
                                 <td class="col-sm-10"><textarea class="form-control" type="text" name="businessName"></textarea>
-                                    <p style="font-style: italic">Noter kan kun ses af administrator</p>
+                                    <p style="font-style: italic"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-2" style="text-align: left"><label>Intern note </label><a style="float: right" class="glyphicon glyphicon-info-sign" data-toggle="tooltip"
+                                        title="Intern note kan kun ses af administrator"></a> </td>
+                                <td class="col-sm-10"><textarea class="form-control" type="text" name="businessName"></textarea>
                                 </td>
                             </tr>
                         </table>
@@ -489,27 +495,6 @@
                         <div>
                             <input class="form-control" id="taskInput" type="text" placeholder="Tilføj opgave" />
                         </div>
-
-
-                        <!-- 
-                <div class="row">
-                    <div class="col-sm-12">
-                        <select class="js_select2" multiple="multiple" style="width:100%">
-                    <optgroup label="Seneste">
-                        <option value="R">#Frontend </option>
-                        <option value="C">#SEO</option>
-                        <option value="C">#Database</option>
-                    </optgroup>
-                    <optgroup label="Andre">
-                        <option value="C">#Møde</option>
-                        <option value="M">#Backend</option>
-                        <option value="S">#Hjemmeside</option>
-                    </optgroup>
-                </select>
-                    </div>
-                </div>
-                -->
-
                         <!-- ASSIGNMENT PICKER END -->
 
 
@@ -556,9 +541,13 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <div class="ui checkbox">
-                                                <input type="checkbox" name="example" value="">
-                                            </div>
+                                            <select class="js_select2Fakturabel" style="width:75%">
+                                                        <optgroup label="Vælg venligst">
+                                                            <option value="ja">Ja</option>
+                                                            <option value="null">-</option>
+                                                            <option value="Nej">Nej</option>
+                                                        </optgroup>
+                                                    </select>
                                         </td>
                                         <td class="js_tableFaktureringPersonHide" style="width: 20%">
                                             <div class="col-md-4 css_noPaddingLeftRight">
@@ -648,81 +637,211 @@
                         <!-- START LIST OF TEMPLATES -->
                         <div class="row">
                             <div class="col-sm-12" class="form-control">
-                                <table class="table">
-                                    <tr style="background-color: #F2F2F2">
+                                <table class="table" id="templatesTable">
+                                    <thead style="background-color: #F2F2F2">
                                         <th>
                                             Templates
                                         </th>
                                         <th>
-                                            Medarbejdere
+                                            Opgave
                                         </th>
-                                    </tr>
-                                    <tr>
-                                        <td style="text-align: left; width: 30%">
-                                            <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
-                                            <span>Scrum</span>
-                                        </td>
-                                        <td>
-                                            <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
-                                        <optgroup label="Medarbejdere">
-                                            <option value="Je">Jens 👤</option>
-                                            <option value="Ma">Maria 👤</option>
-                                            <option value="Lo">Lone 👤</option> 
-                                            <option value="Tr">Trine 👤</option>
-                                            <option value="Al">Albert 👤</option>
-                                            <option value="Ol">Ole 👤</option> 
-                                            <option value="Ha">Hans 👤</option>
-                                            <option value="Ja">Jan 👤</option>
-                                            <option value="Mat">Mathias 👤</option> 
-                                        </optgroup>
-                                    </select>
-                                        </td>
-                                    </tr>
+                                        <th>Labels</th>
+                                        <th></th>
+                                    </thead>
+                                    <!-- START ROW -->
                                     <tr>
                                         <td style="text-align: left">
                                             <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
                                             <span>Frontend</span>
+                                            <a style="float: right" class="glyphicon glyphicon-list-alt" data-toggle="tooltip" title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsam eligendi vel nihil? Suscipit id nesciunt corporis. Omnis illum reiciendis cupiditate ullam fugit. Natus, adipisci necessitatibus. Sit culpa debitis placeat.
+                                                "></a>
+                                        </td>
+                                        <td width="10%" style="text-align: left;">
+                                            Grafisk design
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <button type="button" class="btn btn-primary btn-xs">#Fase 1</button>
+                                            <button type="button" class="btn btn-primary btn-xs">#Frontend</button>
+                                            <button type="button" class="btn btn-primary btn-xs">#Design</button>
+                                            <button type="button" class="btn btn-primary btn-xs">#Photoshop</button>
                                         </td>
                                         <td>
-                                            <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
-                                        <optgroup label="Medarbejdere">
-                                            <option value="Je">Jens 👤</option>
-                                            <option value="Ma">Maria 👤</option>
-                                            <option value="Lo">Lone 👤</option> 
-                                            <option value="Tr">Trine 👤</option>
-                                            <option value="Al">Albert 👤</option>
-                                            <option value="Ol">Ole 👤</option> 
-                                            <option value="Ha">Hans 👤</option>
-                                            <option value="Ja">Jan 👤</option>
-                                            <option value="Mo">Mohammed 👤</option> 
-                                        </optgroup>
-                                    </select>
+                                            <a class="btn btn-primary" aria-label="Left Align"><span class="glyphicon glyphicon-pencil" data-toggle="collapse" href="#templateCollapse"aria-hidden="true" id="edit1"></span></a>
                                         </td>
+                                        <tr>
+                                            <td colspan="5" class="css_templatesMedarbejderRowStyling">
+                                                <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                                        <optgroup label="Medarbejdere">
+                                                            <option value="Je">Jens 👤</option>
+                                                            <option value="Ma">Maria 👤</option>
+                                                            <option value="Lo">Lone 👤</option> 
+                                                            <option value="Tr">Trine 👤</option>
+                                                            <option value="Al">Albert 👤</option>
+                                                            <option value="Ol">Ole 👤</option> 
+                                                            <option value="Ha">Hans 👤</option>
+                                                            <option value="Ja">Jan 👤</option>
+                                                            <option value="Mo">Mohammed 👤</option> 
+                                                        </optgroup>
+                                                    </select>
+                                            </td>
+                                        </tr>
                                     </tr>
+                                    <!-- END ROW -->
+
+                                    <!-- START ROW -->
                                     <tr>
                                         <td style="text-align: left">
                                             <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
-                                            <span>Backend</span>
+                                            <span>Forretning</span>
+                                            <a style="float: right" class="glyphicon glyphicon-list-alt" data-toggle="tooltip" title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsam eligendi vel nihil? Suscipit id nesciunt corporis. Omnis illum reiciendis cupiditate ullam fugit. Natus, adipisci necessitatibus. Sit culpa debitis placeat.
+                                                "></a>
+                                        </td>
+                                        <td width="10%" style="text-align: left;">
+                                            Forretningsudvikling
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <button type="button" class="btn btn-primary btn-xs">#Fase 1</button>
+                                            <button type="button" class="btn btn-primary btn-xs">#Finans</button>
+                                            <button type="button" class="btn btn-primary btn-xs">#Fase 2</button>
+                                            <button type="button" class="btn btn-primary btn-xs">#Planlægning</button>
                                         </td>
                                         <td>
-                                            <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
-                                        <optgroup label="Medarbejdere">
-                                            <option value="Je">Jens 👤</option>
-                                            <option value="Ma">Maria 👤</option>
-                                            <option value="Lo">Lone 👤</option> 
-                                            <option value="Tr">Trine 👤</option>
-                                            <option value="Al">Albert 👤</option>
-                                            <option value="Ol">Ole 👤</option> 
-                                            <option value="Ha">Hans 👤</option>
-                                            <option value="Ja">Jan 👤</option>
-                                            <option value="Mo">Mohammed 👤</option> 
-                                        </optgroup>
-                                    </select>
+                                            <a class="btn btn-primary" aria-label="Left Align"><span class="glyphicon glyphicon-pencil" data-toggle="collapse" href="#templateCollapse"aria-hidden="true" id="edit2"></span></a>
                                         </td>
+                                        <tr>
+                                            <td colspan="5" class="css_templatesMedarbejderRowStyling">
+                                                <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                                    <optgroup label="Medarbejdere">
+                                                        <option value="Je">Jens 👤</option>
+                                                        <option value="Ma">Maria 👤</option>
+                                                        <option value="Lo">Lone 👤</option> 
+                                                        <option value="Tr">Trine 👤</option>
+                                                        <option value="Al">Albert 👤</option>
+                                                        <option value="Ol">Ole 👤</option> 
+                                                        <option value="Ha">Hans 👤</option>
+                                                        <option value="Ja">Jan 👤</option>
+                                                        <option value="Mo">Mohammed 👤</option> 
+                                                    </optgroup>
+                                                </select>
+                                            </td>
+                                        </tr>
                                     </tr>
+                                    <!-- END ROW -->
 
+                                    <!-- START ROW -->
+                                    <tr>
+                                        <td style="text-align: left">
+                                            <button type="button" class="btn btn-default btn-circle"><i class="glyphicon glyphicon-remove"></i></button>
+                                            <span>Ledelse</span>
+                                            <a style="float: right" class="glyphicon glyphicon-list-alt" data-toggle="tooltip" title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ipsam eligendi vel nihil? Suscipit id nesciunt corporis. Omnis illum reiciendis cupiditate ullam fugit. Natus, adipisci necessitatibus. Sit culpa debitis placeat.
+                                                "></a>
+                                        </td>
+                                        <td width="10%" style="text-align: left;">
+                                            Projekt Ledelse
+                                        </td>
+                                        <td style="text-align: left;">
+                                            <button type="button" class="btn btn-primary btn-xs">#Fase 1</button>
+                                            <button type="button" class="btn btn-primary btn-xs">#Ledelse</button>
+                                            <button type="button" class="btn btn-primary btn-xs">#Fase 2</button>
+                                            <button type="button" class="btn btn-primary btn-xs">#Scrum</button>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-primary" aria-label="Left Align"><span class="glyphicon glyphicon-pencil" data-toggle="collapse" href="#templateCollapse"aria-hidden="true" id="edit3"></span></a>
+                                        </td>
+                                        <tr>
+                                            <td colspan="5" class="">
+                                                <select class="js_select2Templates" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
+                                                        <optgroup label="Medarbejdere">
+                                                            <option value="Je">Jens 👤</option>
+                                                            <option value="Ma">Maria 👤</option>
+                                                            <option value="Lo">Lone 👤</option> 
+                                                            <option value="Tr">Trine 👤</option>
+                                                            <option value="Al">Albert 👤</option>
+                                                            <option value="Ol">Ole 👤</option> 
+                                                            <option value="Ha">Hans 👤</option>
+                                                            <option value="Ja">Jan 👤</option>
+                                                            <option value="Mo">Mohammed 👤</option> 
+                                                        </optgroup>
+                                                    </select>
+                                            </td>
+                                        </tr>
+                                    </tr>
+                                    <!-- END ROW -->
                                 </table>
+                                <button class="btn btn-primary" data-parent="#templateParent" data-toggle="collapse" href="#templateCollapse" id="opretTemplate">Opret template</button>
 
+                                <br>
+                                <br>
+                                <!-- START TEMPLATE FORM -->
+                                <div id="templateCollapse" class="collapse">
+                                    <form>
+
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Labels</label>
+                                                <br>
+                                                <select class="js_select2" multiple="multiple" style="width:100%">
+                                                <optgroup label="Vælg label">
+                                                    <option value="R">#Fase1 </option>
+                                                    <option value="C">#Fase2</option>
+                                                    <option value="C">#Backend</option>
+                                                    <option value="C">#Frontend</option>
+                                                </optgroup>
+                                            </select>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label>Opgaver</label>
+                                                <br>
+                                                <select class="js_select2VælgOpgaver" style="width:100%">
+                                                    <option></option>
+                                                    <option value="C">Forretningsudvikling</option>
+                                                    <option value="P">Grafisk design</option>
+                                                    <option value="P">Projektledelse</option>
+                                             </select>
+                                            </div>
+                                        </div>
+                                        <!-- START FIRMA/PROJEKT -->
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Note</label>
+                                                <br>
+                                                <textarea class="form-control"></textarea>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label></label>
+                                                <br>
+                                                <div class="css_padding5px">
+                                                    <input style="float: left" type="checkbox" checked data-toggle="toggle" data-on="Fakturerbar" data-off="Ikke fakturerbar"
+                                                        data-onstyle="success" data-offstyle="danger" data-width="100%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END FIRMA/PROJEKT -->
+
+                                        <br>
+
+                                        <!-- START LABELS/MEDARBEJDERE -->
+                                        <!-- END LABELS/MEDARBEJDERE -->
+
+                                        <!-- START FOOTER TEMPLATE -->
+                                        <div class="row" style="padding: 10px">
+                                            <div class="col-md-6 css_removePadding">
+                                                <div class="css_padding5px">
+                                                    <button class="btn btn-primary" data-toggle="collapse" href="#templateCollapse"aria-hidden="true" style="width:100%">Gem template</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 css_removePadding">
+                                                <div class="css_padding5px">
+                                                    <button class="btn btn-default" data-toggle="collapse" href="#templateCollapse"aria-hidden="true" style="width:100%">Luk</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- END FOOTER TEMPLATE -->
+                                    </form>
+                                    <!-- END TEMPLATE FORM -->
+                                </div>
+                                <!-- END OPRET TEMPLATE & GEM OG Annuller KNAP -->
                             </div>
                         </div>
                         <!-- END LIST OF TEMPLATES -->
@@ -735,107 +854,14 @@
                             <div class="col-sm-12">
                                 <div>
                                     <button class="btn btn-success">Gem projekt</button>
-                                    <button class="btn btn-primary" data-parent="#templateParent" data-toggle="collapse" href="#templateCollapse" id="opretTemplate">Opret template</button>
+
                                     <button class="btn btn-default">Annuller</button>
                                     <br><br><br>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- START TEMPLATE FORM -->
-                        <div id="templateCollapse" class="collapse">
-                            <form>
 
-                                <!-- START Tidsregistrering TITEL -->
-                                <br>
-                                <!-- END Tidsregistrering TITEL -->
-
-                                <!-- START FIRMA/PROJEKT -->
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Firma</label>
-                                        <select class="js_select2" style="width:100%">
-                                <option value="I">IKEA</option>
-                                <option value="M">Mash</option>
-                            </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label>Projekt</label>
-                                        <select class="js_select2" style="width:100%">
-                                <option value="AL">Hjemmeside</option>
-                                <option value="WY">App</option>
-                            </select>
-                                    </div>
-                                </div>
-                                <!-- END FIRMA/PROJEKT -->
-
-                                <br>
-
-                                <!-- START LABELS/MEDARBEJDERE -->
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Labels</label>
-                                        <br>
-                                        <select class="js_select2" multiple="multiple" style="width:100%">
-                                <optgroup label="Seneste">
-                                    <option value="R">#Frontend </option>
-                                    <option value="C">#SEO</option>
-                                    <option value="C">#Database</option>
-                                </optgroup>
-                                <optgroup label="Andre">
-                                    <option value="C">#Møde</option>
-                                    <option value="M">#Backend</option>
-                                    <option value="S">#Hjemmeside</option>
-                                </optgroup>
-                            </select>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label>Medarbejdere</label>
-                                        <br>
-                                        <select class="js_select2" multiple="multiple" placeholder="Vælg Projekt" style="width:100%">
-                                <optgroup label="Seneste">
-                                    <option value="C">Mikkel 👤</option>
-                                    <option value="P">Peter 👤</option>
-                                </optgroup>
-                                <optgroup label="Andre">
-                                    <option value="C">Jens 👤</option>
-                                    <option value="M">Maria 👤</option>
-                                    <option value="S">Lone 👤</option> 
-                                </optgroup>
-                            </select>
-                                    </div>
-                                </div>
-                                <!-- END LABELS/MEDARBEJDERE -->
-
-                                <!-- START FOOTER TEMPLATE -->
-                                <div class="row" style="padding: 10px">
-                                    <div class="col-md-6">
-                                        <div class="css_padding5px">
-                                            <input style="float: left" type="checkbox" checked data-toggle="toggle" data-on="Fakturerbar" data-off="Ikke fakturerbar"
-                                                data-onstyle="success" data-offstyle="danger" data-width="100%">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="col-md-6 css_removePadding">
-                                            <div class="css_padding5px">
-                                                <button class="btn btn-primary" data-dismiss="collapse" style="width:100%">Gem template</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 css_removePadding">
-                                            <div class="css_padding5px">
-                                                <button class="btn btn-default" data-dismiss="collapse" style="width:100%">Luk</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END FOOTER TEMPLATE -->
-                            </form>
-                            <br>
-                            <!-- END TEMPLATE FORM -->
-                        </div>
-                        <!-- END OPRET TEMPLATE & GEM OG Annuller KNAP -->
                     </div>
                     <!-- END COL-MD-6 -->
 

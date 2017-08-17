@@ -70,8 +70,11 @@ $(document).ready(function () {
                         )
                     )
                     .append($('<td>')
-                        .append($('<div class="ui checkbox">')
-                            .append($('<input type="checkbox" name="example" value="">')
+                        .append($('<select class="js_select2Fakturabel" style="width:75%">')
+                            .append($('<optgroup label="Vælg venligst">')
+                                .append($('<option value="ja">Ja</option>'))
+                                .append($('<option value="null">-</option>'))
+                                .append($('<option value="nej">Nej</option>'))
                             )
                         )
                     )
@@ -102,6 +105,11 @@ $(document).ready(function () {
 
             // TILFØJ SEMANTIC UI PÅ CHECKBOXES 
             $('.ui.checkbox').checkbox();
+
+            // TILFØJ SELECT2
+            $(".js_select2Fakturabel").select2({
+                minimumResultsForSearch: -1
+            });
             //Opdaterer tablet så rækken passer med hvilken dropdown der er valgt
             updateTables();
 
@@ -258,17 +266,31 @@ $(document).ready(function () {
 });
 
 //Tooltip hover for the questionmark
+// Til editknapperne, dårlige hardcode, men ellers bliver man ikke ført til buns af siden når der klikkes de 3 edit knapper
+function templateScrollFooter() {
+    $('#templateCollapse').on('shown.bs.collapse', function () {
+        $('html, body').animate({
+            scrollTop: $("footer").offset().top
+        }, 1);
+    })
+}
 
+//Tooltip hover for the questionmark
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 
     $("#opretTemplate").on("click", function () {
-        $('#templateCollapse').on('shown.bs.collapse', function () {
-            $('html, body').animate({
-                scrollTop: $("footer").offset().top
-            }, 1);
-        })
-
+        templateScrollFooter();
+    });
+    // Til editknapperne, dårlige hardcode, men ellers bliver man ikke ført til buns af siden når der klikkes de 3 edit knapper
+    $("#edit1").on("click", function () {
+        templateScrollFooter();
+    });
+    $("#edit2").on("click", function () {
+        templateScrollFooter();
+    });
+    $("#edit3").on("click", function () {
+        templateScrollFooter();
     });
 });
 
@@ -294,6 +316,10 @@ $(document).ready(function () {
 
     $(".js_select2Fakturabel").select2({
         minimumResultsForSearch: -1
+    });
+
+    $(".js_select2VælgOpgaver").select2({
+        placeholder: "Vælg Opgave"
     });
 
 

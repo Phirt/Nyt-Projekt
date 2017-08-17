@@ -269,7 +269,29 @@ $(document).ready(function () {
                 scrollTop: $("footer").offset().top
             }, 1);
         })
+    });
 
+    // Til editknapperne, dårlige hardcode, men ellers bliver man ikke ført til buns af siden når der klikkes de 3 edit knapper
+    $("#edit1").on("click", function () {
+        $('#templateCollapse').on('shown.bs.collapse', function () {
+            $('html, body').animate({
+                scrollTop: $("footer").offset().top
+            }, 1);
+        })
+    });
+    $("#edit2").on("click", function () {
+        $('#templateCollapse').on('shown.bs.collapse', function () {
+            $('html, body').animate({
+                scrollTop: $("footer").offset().top
+            }, 1);
+        })
+    });
+    $("#edit3").on("click", function () {
+        $('#templateCollapse').on('shown.bs.collapse', function () {
+            $('html, body').animate({
+                scrollTop: $("footer").offset().top
+            }, 1);
+        })
     });
 });
 

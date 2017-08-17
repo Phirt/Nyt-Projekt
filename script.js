@@ -258,40 +258,31 @@ $(document).ready(function () {
     });
 });
 
-//Tooltip hover for the questionmark
+// Til editknapperne, dårlige hardcode, men ellers bliver man ikke ført til buns af siden når der klikkes de 3 edit knapper
+function templateScrollFooter() {
+    $('#templateCollapse').on('shown.bs.collapse', function () {
+        $('html, body').animate({
+            scrollTop: $("footer").offset().top
+        }, 1);
+    })
+}
 
+//Tooltip hover for the questionmark
 $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
 
     $("#opretTemplate").on("click", function () {
-        $('#templateCollapse').on('shown.bs.collapse', function () {
-            $('html, body').animate({
-                scrollTop: $("footer").offset().top
-            }, 1);
-        })
+        templateScrollFooter();
     });
-
     // Til editknapperne, dårlige hardcode, men ellers bliver man ikke ført til buns af siden når der klikkes de 3 edit knapper
     $("#edit1").on("click", function () {
-        $('#templateCollapse').on('shown.bs.collapse', function () {
-            $('html, body').animate({
-                scrollTop: $("footer").offset().top
-            }, 1);
-        })
+        templateScrollFooter();
     });
     $("#edit2").on("click", function () {
-        $('#templateCollapse').on('shown.bs.collapse', function () {
-            $('html, body').animate({
-                scrollTop: $("footer").offset().top
-            }, 1);
-        })
+        templateScrollFooter();
     });
     $("#edit3").on("click", function () {
-        $('#templateCollapse').on('shown.bs.collapse', function () {
-            $('html, body').animate({
-                scrollTop: $("footer").offset().top
-            }, 1);
-        })
+        templateScrollFooter();
     });
 });
 
@@ -321,7 +312,7 @@ $(document).ready(function () {
 
     $(".js_select2VælgOpgaver").select2({
         placeholder: "Vælg Opgave"
-      });
+    });
 
 
 

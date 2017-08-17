@@ -129,15 +129,15 @@
                                             <!-- START TIDER & MATERIALER COLLAPSE -->
                                             <div id="collapseTidOgMaterialer" class="panel-collapse collapse in">
                                                 <div class="css_expandMarginPadding" style="text-align: left;">
-                                                    <h4><strong>Faktureringsmetode</strong></h4>
+                                                    <h4><strong>Fakturering</strong></h4>
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <select class="form-control css_noPaddingTopBottom" id="js_dropdownTidFaktureringSelect">
-                                            <option value="">Ingen faktureringsmetode valgt</option>
-                                            <option value="Project">Projekt timepris</option>
-                                            <option value="Person">Person timepris</option>
-                                            <option value="Task">Opgave timepris</option>
-                                        </select>
+                                                                <option value="">Ingen faktureringsmetode valgt</option>
+                                                                <option value="Project">Projekt timepris</option>
+                                                                <option value="Person">Person timepris</option>
+                                                                <option value="Task">Opgave timepris</option>
+                                                            </select>
                                                         </div>
                                                         <!-- -->
                                                         <!-- START Fakturering Project timepris-->
@@ -159,13 +159,13 @@
                                                         <h4><strong>Budget</strong></h4>
                                                         <div class="col-md-6 css_removePadding">
                                                             <select class="form-control css_noPaddingTopBottom" id="js_dropdownTidBudgetSelect">
-                                            <option value="">Intet Budget</option>
-                                            <option value="ProjektTimer">Samlet projekttimer</option>
-                                            <option value="ProjektPris">Samlet projektudgifter</option>
-                                            <option value="OpgaveTimer">Timer pr. opgave</option>
-                                            <option value="PersonTimer">Timer pr. person</option>
-                                            <option value="OpgavePris">Udgifter pr. opgave</option>
-                                        </select>
+                                                                <option value="">Intet Budget</option>
+                                                                <option value="ProjektTimer">Samlet projekttimer</option>
+                                                                <option value="ProjektPris">Samlet projektudgifter</option>
+                                                                <option value="OpgaveTimer">Timer pr. opgave</option>
+                                                                <option value="PersonTimer">Timer pr. person</option>
+                                                                <option value="OpgavePris">Udgifter pr. opgave</option>
+                                                            </select>
                                                         </div>
 
 
@@ -211,16 +211,66 @@
                                             </div>
                                             <!-- END TIDER & MATERIALER COLLAPSE -->
 
-                                            <!-- START FASTLAGT PRIS COLLAPSE -->
+                                            <!-- START FAST PRIS COLLAPSE -->
                                             <div id="collapseFastlagtPris" class="panel-collapse collapse">
                                                 <div class="css_expandMarginPadding" style="text-align: left;">
                                                     <div class="form-inline">
-                                                        <p class="help-block">Indtast det aftalte beløb</p>
-                                                        <label>kr.</label> <input type="text" class="form-control" />
+                                                        <h4><strong>Fakturering</strong></h4>
+                                                        <span class="help-block">Indtast det aftalte beløb 
+                                                        <label style="padding-left:20px"><bold> kr.</bold></label> <input type="text" class="form-control" />
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="css_divPadding-top">
+                                                        <h4><strong>Budget</strong></h4>
+                                                        <div class="col-md-6 css_removePadding">
+                                                            <select class="form-control css_noPaddingTopBottom" id="js_dropdownFastprisBudgetSelect">
+                                                                <option value="">Intet Budget</option>
+                                                                <option value="ProjektTimer">Samlet projekttimer</option>
+                                                                <option value="OpgaveTimer">Timer pr. opgave</option>
+                                                                <option value="PersonTimer">Timer pr. person</option>
+                                                                <option value="OpgavePris">Udgifter pr. opgave</option>
+                                                            </select>
+                                                        </div>
+
+
+
+                                                        <div class="col-md-3 js_tableBudgetProjektTimerHide">
+                                                            <div class="col-md-8 css_noPaddingLeftRight">
+                                                                <div class="css_noPaddingLeftRight">
+                                                                    <input class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div style="float:left; padding-right:5; font-size: 16px;">
+                                                                    <b>timer</b>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-3 js_tableBudgetProjektPrisHide">
+                                                            <div class="col-md-4">
+                                                                <div style="float:right; padding-right:5; font-size: 16px;">
+                                                                    <b>kr.</b>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-8 css_noPaddingLeftRight">
+                                                                <input class="form-control">
+                                                            </div>
+                                                        </div>
+
+                                                        <br>
+                                                        <div class="css_divPadding-top">
+
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><input type="checkbox" value=""> Send email, hvis projektet overstiger</span>
+                                                                <input id="msg" type="text" class="form-control" name="msg" placeholder="%">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- END FASTLAGT PRIS COLLAPSE -->
+                                            <!-- END FAST PRIS COLLAPSE -->
 
                                             <!-- START NON-BILLABLE COLLAPSE -->
                                             <div id="collapseNonBillable" class="panel-collapse collapse">

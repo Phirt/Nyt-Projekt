@@ -214,26 +214,26 @@ function updateTables() {
     $(".js_tableBudgetPersonTimerHide").hide();
     $(".js_tableBudgetOpgavePrisHide").hide();
 
-    if ($("#js_dropdownTidBudgetSelect").val() === "ProjektTimer" || $("#js_dropdownNonbillableBudgetSelect").val() === "ProjektTimer") {
+    if ($("#js_dropdownTidBudgetSelect").val() === "ProjektTimer" || $("#js_dropdownNonbillableBudgetSelect").val() === "ProjektTimer"  || $("#js_dropdownFastprisBudgetSelect").val() === "ProjektTimer") {
         $(".js_tableBudgetProjektTimerHide").show();
     }
     if ($("#js_dropdownTidBudgetSelect").val() === "ProjektPris") {
         $(".js_tableBudgetProjektPrisHide").show();
     }
-    if ($("#js_dropdownTidBudgetSelect").val() === "OpgaveTimer" || $("#js_dropdownNonbillableBudgetSelect").val() === "OpgaveTimer") {
+    if ($("#js_dropdownTidBudgetSelect").val() === "OpgaveTimer" || $("#js_dropdownNonbillableBudgetSelect").val() === "OpgaveTimer" || $("#js_dropdownFastprisBudgetSelect").val() === "OpgaveTimer") {
         $(".js_tableBudgetOpgaveTimerHide").show();
     }
-    if ($("#js_dropdownTidBudgetSelect").val() === "PersonTimer" || $("#js_dropdownNonbillableBudgetSelect").val() === "PersonTimer") {
+    if ($("#js_dropdownTidBudgetSelect").val() === "PersonTimer" || $("#js_dropdownNonbillableBudgetSelect").val() === "PersonTimer" || $("#js_dropdownFastprisBudgetSelect").val() === "PersonTimer") {
         $(".js_tableBudgetPersonTimerHide").show();
     }
-    if ($("#js_dropdownTidBudgetSelect").val() === "OpgavePris") {
+    if ($("#js_dropdownTidBudgetSelect").val() === "OpgavePris" || $("#js_dropdownFastprisBudgetSelect").val() === "OpgavePris") {
         $(".js_tableBudgetOpgavePrisHide").show();
     }
 }
 
 // INITIAL TABLE UPDATE
 $(document).ready(function () {
-    $("#js_dropdownTidFaktureringSelect").change(function (e) {
+    $("#js_dropdownTidFaktureringSelect").change(function (e) { 
         updateTables();
     });
 });
@@ -246,6 +246,13 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("#js_dropdownNonbillableBudgetSelect").change(function (e) {
+        updateTables();
+    });
+});
+
+$(document).ready(function () {
+    $("#js_dropdownFastprisBudgetSelect").change(function (e) {
+        console.log("fastpris test");
         updateTables();
     });
 });
